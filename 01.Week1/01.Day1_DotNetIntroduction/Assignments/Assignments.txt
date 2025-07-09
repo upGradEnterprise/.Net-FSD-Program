@@ -1,0 +1,28 @@
+Day-1
+~~~~
+1.   Write a C# program to process employee details using console application:
+			empno, ename, job, salary, deptno
+			
+			a.  read all employee details from the user 
+			b.  Display all employee details in single line using interpolation 
+			
+			
+2.  Write a C# program to process product details using console application:
+			 
+			 a. read product details from user :   productId, name, qty, unitPrice
+			 b. find out total amount based on qty and unitPrice
+			 c. Apply 10%  discount after total calculation.
+			 d. display all the details along with before discount and after discount. 
+				 
+3. how to display two digits after decimal point in c#?  Update the above example to display unitPrice and total amount.
+
+
+4. Study the following points :
+		a.  Diff. between .net core and .net framework
+		b.  What are the key features of .NET Core?
+		c.  What is Kestrel?  
+		
+
+
+
+ 
