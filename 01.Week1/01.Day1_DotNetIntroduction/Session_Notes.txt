@@ -1,1 +1,137 @@
      
+
+Day-1
+~~~~~~
+
+
+
+BackEnd ---   .net  /  C# 
+
+		C --->   C,c++, Java, C#, javaScript, typescript 
+		
+FrontEnd ---   React / JavaScript 
+
+
+
+
+
+Console
+System
+
+WriteLine()
+ReadLine()
+
+		
+Employee
+
+GetEmployee()
+GetEmployeeById()
+
+		
+
+
+What is .net ?
+
+	framework   =  libs.  + runtime 
+	
+	2002
+	
+	VB / VB Script 
+	Classic ASP (VB Script)
+	
+	.NET   supports languages :     VB.NET, C#.NET, VJ#,  etc....
+	
+	C#.NET
+	
+	
+	Develop the applications :    
+										console apps
+			asp.net :			web apps, mvc,  web api 
+			
+			
+			front-end :	   html, css, javaScript, js, react, angular 
+			
+			
+			
+			
+			
+	
+	Visual Studio 
+	
+	
+
+
+.net framework
+.net core 
+
+
+
+
+
+
+Visual Studio 2022  (Community)
+
+VS Code  
+
+	
+
+
+
+
+
+					
+		
+
+1. .net intro.
+2. .net components
+3. ide  (vs / vs code)
+4. C# - Console App
+
+
+	
+9:30 am  to 5:30 pm 
+	
+11 am 		---		15 min
+1:15   	pm 	---		45 mins.
+4 pm  			---		15 min.
+
+
+
+
+
+
+
+
+
+
+
+using  System;			// Importing namespace
+
+
+	--> We can access all types(classes) that are available in the System namespace
+	
+	Eg:   Console class belongs to System namespace 
+	
+	
+namespace :   logical grouping of the types(classes)
+
+
+
+
+
+class   ClassName
+{
+		
+}
+
+
+
+Main() method :   	  Entry Point 
+
+	-->  Name :      Main
+	-->  static 	
+
+
+
+
+
