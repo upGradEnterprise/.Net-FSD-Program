@@ -1,0 +1,35 @@
+
+Day-2
+~~~~~~
+
+C# Programming :  Data Types , Variables 
+
+
+namespace :   logical grouping of the types(classes)
+
+	
+		Types:
+					1.  Classes 
+					2.  Interfaces
+					3.  Delegates					
+					4.  Structures
+					5.  Enumerations 
+
+
+
+	byte,  short,  int , long 
+	
+	float, double , decimal 
+	
+	string,  char
+	
+	bool 
+	--------------------------------------------
+	DateTime 
+
+
+
+Convert.ToInt32()
+Convert.ToInt64()
+
+
