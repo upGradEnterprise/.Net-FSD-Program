@@ -33,3 +33,51 @@ Convert.ToInt32()
 Convert.ToInt64()
 
 
+
+
+
+Implicitly typed local variables 
+
+	var  x = 10;
+	
+	x = "Hello";	// error
+	
+
+		a.  Implicitly   ---   automatically type will be decided 
+		b.  typed 			---   strongly typed 
+		c.  local variables   ---   inside the methods 
+
+
+When do we use var?
+	1.   LINQ   Programming
+	2.   Anonymous Types
+	3.   Simplify the variable declarations / assignments when you  have complex types. 
+
+var  x  =  ........;
+
+
+		
+	   {	
+			
+			
+			   return Ok(new { Status = "New Employee resource created in server" });
+		}
+	
+	
+	  var x= 10;
+	  var y = 20;
+	  
+		Sum(x,y);
+		
+		
+		
+		void Sum(int   x, int y)
+		{
+			
+		}
+		
+	---------------------------------------------------
+	
+	
+	
+	
