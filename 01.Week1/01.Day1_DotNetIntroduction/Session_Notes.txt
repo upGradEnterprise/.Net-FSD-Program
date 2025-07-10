@@ -1,4 +1,3 @@
-     
 
 Day-1
 ~~~~~~
@@ -132,6 +131,67 @@ Main() method :   	  Entry Point
 	-->  static 	
 
 
+
+
+
+
+
+
+
+Note:
+
+-> Method Parameters, Private Variables  and local variables  ---  camel casing 
+-> Pascal Casing :   Class, Method, properties, interface, namespace etc...
+
+
+
+
+
+string   str =  "123";
+
+int n = int.Parse(str);
+
+
+bool flag  = int.TryParse(Console.ReadLine(), out age );
+
+
+
+
+
+
+
+
+F5   			---    Run with debug
+Ctrl +  F5   			---    Run without debug
+F12			---		Go to definition
+F9		---		Set/Clear breakpoints 
+F10     ---     Line by Line debugging 
+F11		---    Line by Line debugging (cover the function calls)
+
+-----------------------------------------------------------------------------
+
+
+
+namespace :   logical grouping of the types(classes)
+
+
+	
+		Types:
+					1.  Classes 
+					2.  Interfaces
+					3.  Delegates					
+					4.  Structures
+					5.  Enumerations 
+
+
+
+
+
+Eg:
+System
+System.Collections 	
+System.Data
+System.IO
 
 
 
