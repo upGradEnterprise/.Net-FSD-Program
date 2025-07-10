@@ -1,0 +1,29 @@
+ 
+ Assignments(Day-2)
+ ~~~~~~~~~~~~~~~~~~~
+ 
+ 
+1. Implement the given Scenario using Console Application.    
+
+Scenario: You're developing a configuration manager for a server application that defines system-wide settings, such as maximum connections and API keys. Some settings are fixed at compile-time, while others are set at runtime but immutable after initialization.
+
+	Class Name :   Configuration  Manager
+	Public Variables :   maximum connections and API keys
+	
+	
+2.   Implement the given Scenario using Console Application.    
+
+		 
+Scenario: You're building an employee details  where some fields, like a termination date, may not be applicable (e.g., for active employees). You need to handle nullable types and provide default values for missing data.
+
+		Class Name :   Employee
+		Details :   EmployeeId,   Name,  Job,  TerminationDate 
+		
+
+
+
+3.   Study the following points :   
+
+		a.  What is Object class in .net framework?
+		b.  What is boxing and unboxing ? 
+		c.   Diff. between  int.Parse()  and  Convert.ToInt32()
