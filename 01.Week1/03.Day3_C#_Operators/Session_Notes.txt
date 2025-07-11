@@ -1,0 +1,63 @@
+Day-3
+~~~~~
+
+
+1. Coding Standards
+2. Operators in C#
+3. Basic error handling 
+
+
+
+
+
+
+
+
+	1.   What is the difference between == and .Equals() in C#?
+	2.  What will be the output of the following code:  
+					int a = 5;
+					int b = 10;
+					Console.WriteLine(a > 3 && b < 15);
+					
+	3.  Diff. between double and decimal?
+
+
+-----------------------------------------------------------------------------------
+
+
+Case Study : 
+		Employee Bonus Calculator 
+		
+Scenario: 
+		Determine an employee's bonus based on salary, years of service, and performance.
+
+		
+		Data Validations:
+				a.   no. years exp. should be between  1 to 40
+				b.   salary should be greater than or equal to 10000 
+
+				
+		
+		
+		Bonus Applying Conditions:
+		
+			-  Years of  Service should be greater than or Equal to 5  and Salary should be greater than 30000 
+			-  If he is High Performer
+
+
+
+
+
+
+
+
+	
+					
+					
+					
+					
+					
+					
+					
+					
+					
