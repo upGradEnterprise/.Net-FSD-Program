@@ -1,0 +1,91 @@
+
+
+1. Naming Conventions:
+
+			a.  Camel Casing  :  local variables , parameters, private variables 
+			
+					studentId
+					age
+					emailId
+					count
+					empId 
+			
+			b.  Pascal Casing :   Class , methods, interfaces, properties, delegates,...
+			
+				System
+				Console
+				Main
+				Program
+				WriteLine
+				Write 
+				
+				c.  const names in capital letters
+				
+						const  int MAX_COUNT = 10;
+						
+
+
+2.    Files  to define classes:
+			
+				--> Each class should be defined in separate file. 
+				--> File name same as class name.
+				
+						Employee.cs		---  Employee class
+						Student.cs		  ---  Student class
+						
+3.    Folders / Directries					 :
+
+					[  Admin  ]		---  Namespace :   ConsoleApp37.Admin
+							Login.cs
+							ProductCatelog.cs
+							
+					[ Customer ]		---  Namespace :   ConsoleApp37.Customer
+							CustomerRegistration.cs
+							CustomerLogin.cs
+							
+					[ ShoppingCart ]		---	Namespace :   ConsoleApp37.ShoppingCart
+								Cart.cs
+								Orders.cs
+								
+4.   Design Patterns and Principles:
+
+			SOLID Principles
+			Design Patterns
+			
+			
+5.   Add required comments for methods, complex logics 
+
+		//    single line comment 
+		
+		/*
+				Comment Text
+		*/
+		
+
+6.  Coding Practices:
+		
+			
+			a.   Exception  Handling,  prepare the code that avoid exceptions			
+					try...catch..finally 
+					
+			b.   Null Handling:     Handle null values 
+					Eg:		??  ,   is 
+					
+			c.   Avoid delcaraton of variables inside the loops, string type
+			
+				int n  =0;
+				
+				for(.....)
+				{
+				  n = 0;				   
+					....					
+				}
+			
+			d.   Async Programming   (async/await)
+			
+			e.  Avoid boxing and unboxing without proper requirement 
+			
+			
+			
+			
+			
