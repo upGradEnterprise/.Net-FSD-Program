@@ -1,1 +1,134 @@
-     
+Day-4
+~~~~~
+
+
+
+
+
+Loops :
+		a.  Start value
+		b.  Condition 
+		c.  End value   
+		
+		
+		
+array ---	 iterate all the elements in the array 
+
+
+for (   )
+{
+	// control based on the index
+}
+
+
+foreach (int item  in  arr)
+{
+	// forward and traverse all items 
+}
+
+
+
+
+--------------------------------------------------
+
+
+
+
+Menu Driven Programming
+
+	
+
+		1.  Even Numbers
+		2.  Odd  Numbers
+		3.  Five Multiples 
+		4.  Squares 
+		5.  Exist 
+
+	   Enter your option :  5
+	   
+	   
+	   
+	 
+	 
+Case Study
+~~~~~~~~~~
+
+
+
+a.  Read No. of products - Count
+b.  Read product details :  pname, price, qty 
+c.   Find out individual totals and grand total 
+d.   Finally we should display the report 
+
+
+		Name : Laptop,  Price:  25000	, Quantity :   3, Total : 	75000
+		Name : Tab,  Price:  20000	, Quantity :   2, Total : 	40000
+		
+		Grand Total :  115000.00
+		
+
+
+-----------------------------------------------
+
+
+
+
+Example:     Display the stars in diamond shape 
+
+
+n = 5 
+
+
+         *
+      * * *
+    * * * * *
+  * * * * * * *
+* * * * * * * * *
+   * * * * * * *
+    * * * * *
+      * * *
+         *
+
+
+
+----------------------------------------------------------------------------
+
+Collections
+~~~~~~~~~~~
+
+  int[] ar1 = { 1, 2, 3, 4, 5 };
+  int[] ar2 = new int[5];
+  int[] ar3;  // dynamic arrays 
+  
+  string[]  products;
+  
+  n = 5;	// read from user 
+  products = new string[n]; 
+  
+  products[5] =  "";   //  array index out of bound exception 
+  
+
+			Arrays				:			Type-Safe					Fixed Size 
+			ArrayList		:			Not-type safe			Flexible in size 
+			List<T>			:			Type-Safe					Flexible in size 
+
+
+
+		ArrayList  arList = new ArrayList();
+		arList.Add(10);		// boxing 
+		arList.Add(20);		// boxing 
+		
+		int n = (int)  arList[0];	// unboxing
+		
+
+
+		List<int>  numbersList = new List<int>();
+		numbersList.Add(10);		 
+		numbersList.Add(20);		 
+		
+		int n = numbersList[0];	 
+		
+		
+		List<string>  prodNames = new List<string>();
+		List<Employee>  prodNames = new List<Employee>();
+		
