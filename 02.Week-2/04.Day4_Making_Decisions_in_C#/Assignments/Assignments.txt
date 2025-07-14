@@ -1,0 +1,37 @@
+Assignments (Day-4)
+~~~~~~~~~~~~~~~~~~~
+
+1.  Write a program to Print Multiplication Table (up to 10). 
+		a.  Read the number from the user
+		b.  Generate Multiplication table based on that 
+		c.  Output should be like :
+					2   X    1  =   2
+					2   X    2   =  4
+					....
+					
+2.  Generate Fibonacci series of numbers between 0 to 100.
+
+3.   Write a program to Print stars in triangle format. No. of rows should be dynamic. 
+
+		*
+		*  *
+		*  *  *
+		*  *  *  * 
+		*  *  *  *   *
+		
+4.  Write a program to Print Alphabet in triangle pattern format. No. of rows should be dynamic.   
+
+	a  b  c  d  e 
+	a  b  c  d
+	a  b  c
+	a  b
+	a 
+	
+
+5. Write a C# program to implement the below requirement:
+
+		a.  Read 20 random numbers (Use  pre-defined Random class)
+		b.  Find out no. of even numbers and no. of odd numbers  among them 
+		c.  Display the final report 
+				
+		 
