@@ -1,1 +1,49 @@
  
+Day-5  (Working with Methods in C#)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~~~
+
+
+1. What is default keyword?  Optional parameters?
+2. What is params keyword in C#?
+
+
+
+
+
+
+
+
+Naming Standards for Method Name
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1.   Pascal Casing 
+		WriteLine()
+		Write()
+		Greeting()
+		GetCurrentTime()		 
+		....
+		
+	
+2.  Method name should include what action that perform and on what data your are processing:
+	
+		AddEmpoyee()
+		UpdateEmployee()
+		GetEmployeeById()
+		GetEmployees()
+		DeleteEmployee()
+		
+		
+		
+		
+	 
+	 
+Parameters:
+
+		 (string uname)
+		 (int  x, int  y)
+		 (int[]  numbers)
+		 (Employee   obj)
+		 (List<Employee>   empList)
+	
+	
+	
