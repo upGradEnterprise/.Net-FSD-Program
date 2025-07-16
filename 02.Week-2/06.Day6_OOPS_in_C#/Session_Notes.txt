@@ -69,3 +69,52 @@ Private variables :   create private variables using  underscore as pre-fix.
   
   
   
+ Write  a  C# program to process product details using object oriented programming.
+ 
+•	Class should contain private variables:  productId, productName, unitPrice, qty.
+•	Constructor should allow productId as parameter
+•	 Create properties for all private variables. Property Names :   ProductId, ProductName, UnitPrice, Quantity
+•	ProductId – should be readonly property
+•	ShowDetails()  method to display all the details along with total amount. 
+
+
+
+
+
+
+
+Auto-Implemented Properties:
+
+ class Person
+ {
+     public int Age { get; set; }
+     public string Name { get; set; }
+ }
+ 
+ 
+ 
+ // Read-Only 
+  public int Age { get;  private  set; }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  Employee 
+  
+		EmployeeId
+		Name
+		Job
+		Salary
+		Deptno
+		
+		
+		
+  
+   
