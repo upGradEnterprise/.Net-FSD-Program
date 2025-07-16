@@ -1,0 +1,71 @@
+Day-6
+~~~~~~
+
+
+
+OOPs in C#
+
+
+
+
+class  c2 : c1
+{	
+	
+}
+
+
+
+x , y
+
+f1()
+f2()
+...
+f4()
+
+f5()
+...
+f10()
+
+
+
+Class :  Template for objects. 
+
+
+class  ClassName{	
+		//  data
+		
+		// methods 		
+}
+
+
+Name :      Student, Console, Array, Object,  SqlConnection, SqlDataAdapter, BankAccount
+
+
+
+Private variables :   create private variables using  underscore as pre-fix.
+
+  private string _name;    
+  private string _age;
+  
+  
+  
+  
+  System.NullReferenceException: 'Object reference not set to an instance of an object.'
+  
+  
+  
+  
+  
+  Properties:    Combination of get and set
+  
+  
+  -->  value :  value is keyword that hold the value which you are assigned to the property
+  
+  
+		p1.Age = 12;
+		p1.Name  = "Scott";
+  
+  
+  
+  
+  
