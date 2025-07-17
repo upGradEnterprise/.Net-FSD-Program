@@ -1,0 +1,7 @@
+1.  Implement the Library Management Case Study.  Please refer the documentation for problem statement details.
+
+
+2.  Study the following concepts, Prepare some examples to demonstrate these concepts:
+		a.  Static Class
+		b.  Partial Class
+		c.   Sealed Class 
