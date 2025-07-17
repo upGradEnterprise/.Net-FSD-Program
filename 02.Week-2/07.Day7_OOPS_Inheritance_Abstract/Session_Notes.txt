@@ -1,0 +1,75 @@
+Day-7 (17th July, 2025)
+~~~~~~~~~~~~~~~~~~~~~
+
+
+access modifiers  for members of the class:	
+				public 								---  Full access 
+				private (default)				---  within the same class 
+				protected							---  within the same class and child class 
+
+access modifiers for the class:
+				internal 	(default)		---     within the project 
+				public 						---	 outside the project 
+				
+Note:  internal and public access modifer for the class get effects when you are developing class libraries (*.dll  /  assemblies)
+
+
+
+
+using   CustomLib;
+using System;
+
+
+		System.Console.WriteLine();		
+		CustomLib.Console obj = new CustomLib.Console();
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ public void  Greet()  =>   Console.WriteLine("Hello");
+ public int  Sum(int x, int y )  =>   x + y;
+ 
+ 
+ 
+ 
+ 
+ public void  Greet() {
+	  Console.WriteLine("Hello"); 
+ }  
+ 
+ 
+ 
+  public void ShowDetails() => Console.WriteLine($"Name :  {_name}, Age : {_age}");  
+        
+Note:  Every class that we created in C# will implicitly inherits from System.Object class. 
+
+
+
+
+
+
+
+Sending data from child class constructor to parent class constructor:  
+
+
+ public Employee(string name) : base(name)
+ {
+
+ }
+
+
+Note:   Java, JavaScript, TypeScript  ----   super()   
+
+
+
+
+Overriding Methods:
+
+	virtual  	----		parent class , overridable 
+	override	----		child class,  
+
+
