@@ -73,3 +73,44 @@ Overriding Methods:
 	override	----		child class,  
 
 
+
+
+
+
+
+
+
+1.  What is "Is A"  relationship?	---  Inheritance 
+
+2.  What is "Has A"  relationship?
+
+		
+		
+		Addrees  	----		Area, City, State, Pincode
+		
+		Employee  -----      EmployeeId, Name, Job, Salary, .... 
+		
+
+
+
+
+
+
+
+
+
+Regular Class 	---		Supports both  :   either Inheritance or creating objects
+Abstract Class  	--- 		Only for Inheritance
+Sealed Class 		--- 		Only for creating instances, not for Inheritance
+
+
+
+
+
+
+
+
+
+Employee   
+	---  FulltimeEmployee
+	---  ParttimeEmployee
