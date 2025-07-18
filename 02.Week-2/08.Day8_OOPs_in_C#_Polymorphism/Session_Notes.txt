@@ -37,3 +37,16 @@ Error Message (before overload + operator):
 	     	CS0019	Operator '+' cannot be applied to operands of type 'Point' and 'Point'	 
 			
 			
+
+
+Interfaces
+~~~~~~~~~
+
+
+IShape
+
+IEnumerable
+ICollection
+
+IEmployeeService
+IEmployeeRepository
