@@ -1,0 +1,39 @@
+Day8  (18th July, 2025)
+~~~~~~~~~~~~~~~~~~~~~
+
+
+
+1.   is  vs  as operator in C#?
+2.   abstract class  vs interface?
+
+
+
+
+Operator Overloading in C#
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Syntax 
+~~~~~~
+public static ReturnType operator OPERATOR(Type1 operand1, Type2 operand2);
+
+
+Eg:
+		public static Point operator +(Point  p1,  Point p2);
+		public static bool operator ==(Point  p1,  Point p2);
+
+
+ 
+
+Point  p1 = new Point(10,20);
+Point  p2 = new Point(30,40);
+Point p3 =  p1  +  p2;
+
+					 
+
+Note:   
+
+Point p3 =  p1  +  p2;
+Error Message (before overload + operator):
+	     	CS0019	Operator '+' cannot be applied to operands of type 'Point' and 'Point'	 
+			
+			
