@@ -1,1 +1,101 @@
  
+Day-9  (21st July, 2025)
+~~~~~~~~~~~~~~~~~~~~
+
+
+Working with Collections in C#
+--------------------------------------------
+
+
+	using System;
+	int[]   numbers =  new int[10];
+	-------------------------
+	using System.Collections;
+	ArrayList arrList = new ArrayList();
+	
+	arrList.Add(10);		//   stores as System.Object;  boxing 
+	arrList.Add(20);
+
+	int n = (int)  arrList[0];		// unboxing
+	-------------------------------------
+
+
+   using System.Collections.Generic;
+   
+	List<int> lst = new  List<int>();
+	
+	lst.Add(10);		 
+	lst.Add(20);
+
+	int n =  lst[0];	 
+
+
+
+
+
+
+
+lst.Insert(2,  "Mumbai");
+
+
+
+
+
+
+
+
+
+
+	Employee
+	
+	List<Employee>    empList =  new List<Employee>();
+
+
+ // Object Initializer
+Employee obj = new Employee() { Id = 1, Name = "Alice", Job = "Manager", Salary = 75000, Deptno = 10 };
+
+ // Collection Initializer
+ List<Employee> empList = new List<Employee>()
+ {
+       new Employee() { Id = 1, Name = "Alice", Job = "Manager", Salary = 75000, Deptno = 10 },
+       new Employee() { Id = 2, Name = "Bob", Job = "Developer", Salary = 65000, Deptno = 20 },
+       new Employee() { Id = 3, Name = "Charlie", Job = "Analyst", Salary = 60000, Deptno = 20 }
+ };
+
+
+
+
+
+
+
+
+
+
+First()
+FirstOrDefault()
+
+
+ Employee obj = empList.First( item => item.Id == eno );
+ Employee obj = empList.FirstOrDefault( item => item.Id == eno );
+ 
+ 
+ 
+ 
+ 
+ 
+ Student Grades 
+ ~~~~~~~~~~~~~~~
+	Scott  --   56,89,74,58
+	Smith  --  56,89,74, 58, 96
+	Sandy  --  56,89,74,  58, 96, 48
+	
+	
+ 
+ 
+	Dictionary<  string,  List<int>  >  	
+ 
+	
+ 
+ 
+ 
+ 
