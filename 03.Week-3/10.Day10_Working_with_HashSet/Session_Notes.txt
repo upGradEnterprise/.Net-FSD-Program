@@ -1,1 +1,31 @@
   
+Day10(22nd July, 2025)
+~~~~~~~~~~~~~~~~~~~~
+
+
+1.   First() or FirstOrDefault() 
+2. What are the diff. between HashSet  vs   HashTable?
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ HashSet
+ ~~~~~~~~
+ 
+ 
+ Add()  Methods
+		--> returns boolean  value
+		--> True :   indicates - unique value
+		--> False : indicates - duplicate value
+		
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
