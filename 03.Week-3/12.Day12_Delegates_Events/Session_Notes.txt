@@ -1,1 +1,107 @@
    
+Day-12
+~~~~~~
+
+Working with delegates in C#
+
+
+var  result  =  employees.Where( x =>  x.Job == "Manager");
+var  result  =  employees.Select( x =>  x.Job);
+var  result  =  employees.OrderBy( x =>  x.Salary);
+
+
+
+
+Delegate Implementation
+~~~~~~~~~~~~~~~~~~~~~~
+1.  declare the delegate
+
+	public  delegate   void   MyDelegate(int  x);
+	public  delegate   int   MathDelegate(int  x);
+	.....
+	
+	
+2.  Create Instance for the delegate 
+
+		public  void M1(int  n)
+		{
+			
+		}
+
+		MyDelegate   d1 =  new MyDelegate(M1);	//  d1 contains reference of M1
+
+3.  Invoke the method using delegate instance
+
+		d1(10);		// invokes M1()
+
+
+
+Note:  Delegate can refer any type of method (instance or static).
+
+
+---------------------------------------------------
+
+Events Handling in C#
+~~~~~~~~~~~~~~~~~~~~~~
+
+
+Steps:
+
+Publisher
+1.   Create delegate
+2.   Create CustomEventArgs class
+3.   Create Event in publisher class 
+4.   Invoke the method  
+
+Subscriber
+6.  Define the method to handle the event 
+5.  Subscribe the event 
+7.  Perform the operation 
+
+
+
+
+
+
+ Syntax:    public event DelegateName EventName;
+ Eg:    		  public event EventHandler Click;
+ 
+ 
+
+
+public delegate void EventHandler(object? sender, EventArgs e);
+
+
+Class :     Button 
+
+
+		Text =  "Get Data"
+		Click = ?;
+		
+
+  private void button1_Click(object sender, EventArgs e)
+  {
+
+  }
+  
+  ------------------------------------------
+  
+  
+  1.  Order  Class
+  2.  Delegate    OrderNotificationHandler 
+  3.  OrderProceeor  
+			event  OrderNotificationHandler   OnOrderPlaced;
+			PlaceOrder() 
+			
+ 4.  class  NoficationService
+			   SendEmail
+			   SendSMS
+			   
+5.    Program 
+
+					
+			
+	
+  
+  
+  
