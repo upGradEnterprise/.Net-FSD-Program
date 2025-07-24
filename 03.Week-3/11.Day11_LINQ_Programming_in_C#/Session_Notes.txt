@@ -1,1 +1,255 @@
   
+Day11 ( 22nd July, 2025)
+~~~~~~~~~~~~~~~~~~~~~~
+
+LINQ	 Programming 
+
+
+
+
+
+
+	int[]  ar = [5,9,6,2,3,7, 12, 18,22];
+	
+	
+	method:
+		parameter :   array of numbers 
+		
+		functionality :   filter even numbers 
+		
+		return  :   resulted even numbers array 
+
+	
+
+	functionality :   filter even numbers 								 
+								  sorted order 
+								  
+
+
+							filter even numbers 		
+							less <  10
+							sorted order 
+
+
+
+
+
+
+
+public static int[]   FilterNumbers(int[] arr)
+{
+     int count = 0;
+     foreach(int n in arr)
+     {
+         if (n % 2 == 0)
+         {
+             count++;
+         }
+     }
+     int[] list = new int[count];
+     count = 0;
+     foreach(int n in arr)
+     {
+         if (n % 2 == 0  &&  n < 10)
+         {
+             list[count++] = n;
+         }
+     }
+	 
+	 Array.Sort(lst);
+	 
+     return list;
+}
+
+
+
+
+
+
+
+
+
+
+
+SELECT * FROM Products WHERE Category='Mobiles'  
+SELECT * FROM Products WHERE Category='Mobiles'  Order By Price 
+SELECT * FROM Products WHERE Category='Mobiles' AND Price < 15000  Order By Price 
+
+
+Query Techniques 
+
+
+
+
+
+
+
+
+
+	int[]  ar = [5,9,6,2,3,7, 12, 18,22];
+	
+	
+		var  ar2  =  from  n  in  ar
+							where n % 2 == 0 && n < 10
+							orderby n
+							select n;
+							
+							
+		var   arr2  =   arr1.Where( x =>  x % 2 == 0 )
+		var   arr2  =   arr1.Where( x =>  x % 2 == 0 && x < 10 )
+		var   arr2  =   arr1.Where( x =>  x % 2 == 0 && x < 10 ).OrderBy(x =>  x);
+		
+		
+		
+		
+		  List of Employess
+		  List of Products
+		  List of Student
+		  .....
+		  
+		  
+		  
+		  
+		  
+		  empList.Where(x =>  x.Salary <  50000  )
+		  empList.Where(x =>  x.Salary <  50000  ).OrderBy(x => x.Id);
+		  empList.Where(x =>  x.Salary <  50000  ).Select( x => x.Name);
+		  
+		  
+	
+
+
+
+
+
+
+
+GroupBy
+~~~~~~~~
+
+
+	var   groupByDept  =  from emp  in  employees
+										   group emp  by  emp.Department;
+										   
+										   
+
+
+
+		employees.Where( emp =>  emp.Age >  30 )
+		employees.Where(  ?? )
+		
+		
+		employees.Sum( emp =>  emp.Salary)
+
+
+
+
+	
+
+		
+		  
+		  
+		  
+		  
+----------------------------------------------------------------------------------------------------	
+Observation from Room-3 Participants
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		  
+LINQ (Language Integrated Query) is a powerful feature in C# that allows you to query data from different sources (like collections, databases, XML, etc.) using a consistent syntax integrated into the C# language.
+ 
+You have to learn a different query language for each type of data source: SQL databases, XML documents, various Web services, and so on. With LINQ, a query is a first-class language construct, just like classes, methods, and events.
+ 
+When you write queries, the most visible "language-integrated" part of LINQ is the query expression. Query expressions are written in a declarative query syntax. By using query syntax, you perform filtering, ordering, and grouping operations on data sources with a minimum of code. You use the same query expression patterns to query and transform data from any type of data source.
+ 
+using System.Linq;
+ 
+// Specify the data source.
+int[] scores = [97, 92, 81, 60];
+ 
+// Define the query expression.
+IEnumerable<int> scoreQuery =
+    from score in scores
+    where score > 80
+    select score;
+ 
+// Execute the query.
+foreach (var i in scoreQuery)
+{
+    Console.Write(i + " ");
+}
+ 
+// Output: 97 92 81
+ 
+ 
+At compile time, query expressions are converted to standard query operator method calls according to the rules defined in the C# specification. Any query that can be expressed by using query syntax can also be expressed by using method syntax. In some cases, query syntax is more readable and concise. In others, method syntax is more readable. There's no semantic or performance difference between the two different forms.
+ 
+Query Syntax: Similar to SQL, more readable for complex queries.
+ 
+var result = from s in students
+             where s.Age > 18
+             select s;
+ 
+Method Syntax: Uses lambda expressions and extension methods.
+ 
+var result = students.Where(s => s.Age > 18);
+ 
+var keyword is used because of unknown type.
+ 
+ 
+Example :
+ 
+ 
+public class Student
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public int Age { get; set; }
+}
+ 
+List<Student> students = new List<Student>
+{
+    new Student { Id = 1, Name = "Tanis", Age = 22 },
+    new Student { Id = 2, Name = "Riya", Age = 19 },
+    new Student { Id = 3, Name = "Amit", Age = 17 },
+    new Student { Id = 4, Name = "Sneha", Age = 21 }
+};
+ 
+ 
+var adultStudents = from s in students
+                    where s.Age >= 18
+                    orderby s.Name
+                    select s;
+ 
+ 
+var adultStudents = students
+                    .Where(s => s.Age >= 18)
+                    .OrderBy(s => s.Name)
+                    .Select(s => s);
+ 
+ 
+foreach (var student in adultStudents)
+{
+    Console.WriteLine($"{student.Name} - Age: {student.Age}");
+}
+ 
+ 
+Some Other Methods in LINQ:
+ 
+Where – Filters elements based on a condition.
+Select – Projects each element into a new form.
+OrderBy, OrderByDescending – Sorts elements.
+GroupBy – Groups elements.
+Join – Joins two collections.
+Any, All, Contains – Checks conditions.
+First, FirstOrDefault, Single, SingleOrDefault – Retrieves elements.
+ 
+Type of Execution:
+ 
+Deferred Execution: Query is not executed until you iterate over it (e.g., foreach).
+Immediate Execution: Query is executed immediately (e.g., using ToList(), Count()).
+ 
+LINQ Best Practices:
+- Use method syntax for complex queries
+- Use query syntax for readability in simple queries
+- Avoid unnecessary ToList() calls
+- Combine filters before projecting (Where before Select)
