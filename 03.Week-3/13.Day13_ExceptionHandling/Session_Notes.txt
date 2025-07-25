@@ -1,1 +1,53 @@
    
+Day13( 25th July, 2025)
+~~~~~~~~~~~~~~~~~~~~
+
+
+
+Exception handling in C#
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Parent Class :   Exception
+	a.  SystemException :   Parent class for all pre-defined Exception classes
+	b.  ApplicationException:  Parent class for all user-defined Exception classes
+	
+Child Classes:	
+			DivideByZeroException
+			ArrayIndexOutOfBoundException
+			NullReferenceException
+			InvalidCastException
+
+
+
+
+Console.Write("Enter your age: ");
+int   age = Convert.ToInt32(Console.ReadLine());
+
+25
+250
+-250
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Namespace :   System.IO
+ 
+ Classes:     StreamWriter,   StreamReader
+ 
+ 
+ StreamWriter  sw = new StreamWriter(string  filePath,  bool  isAppend);
+ StreamWriter  sw = new StreamWriter("filePath",  true);
+ 
+ sw.WriteLine("message");
+ 
+ sw.WriteLine(ex.Message);
+ sw.WriteLine(ex.StackTrace);
+ 
+ sw.Close();
+ 
+ 
+ 
+ 
