@@ -1,0 +1,63 @@
+Day14(28th July, 2025)
+~~~~~~~~~~~~~~~~~~~~~
+
+
+Why do we use NuGet Package .net applications?
+What is  NuGet Package Manager? 
+What is Logging in .net applications?  Why do we use log files in real-time applications? 
+How Logging helps in Exception Handling?	
+
+
+
+
+
+
+
+
+To Access metadata about the file system items:  
+	a. FileInfo
+	b. DirectoryInfo
+
+
+To process the content of the file:
+		a.  File
+		b.  Stream Classes 
+
+Namespace :   System.IO
+
+
+
+
+StreamWriter sw = new StreamWriter(fileName, isAppend);
+sw.WriteLine();
+sw.Close();
+
+
+[OR]
+
+using(  StreamWriter sw = new StreamWriter(fileName, isAppend) )
+{
+	sw.WriteLine();
+}
+
+ 
+
+
+
+
+
+
+Task:   Writing List employee data in text file as CSV format
+
+
+class  Employee{ ...  }   // override ToString()
+
+List<Employee>  empList = new List<Employee> {......};
+
+
+StreamWriter sw = new StreamWriter(...);
+
+foreach(var item in  empList    )
+{
+			sw.WriteLine(item);
+}
