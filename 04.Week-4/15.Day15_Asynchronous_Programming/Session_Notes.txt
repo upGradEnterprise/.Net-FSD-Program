@@ -1,0 +1,112 @@
+Day15(29th July,  2025)
+~~~~~~~~~~~~~~~~~~~~
+
+Topic :   Asynchronous Programming in C#
+
+
+1.   Synchronous vs Asynchronous Programming in C#
+2.   Threading  vs  Task in C#
+
+
+
+
+Asynchronous Methods in C#:
+
+		-  postfix for all Asynchronous methods:    Async 
+						File.ReadAllTextAsync();
+						
+	
+
+Namespace:  System.Threading.Tasks;
+Class :   Task
+	
+	
+// Synchronous	
+public   void   DoSomeWork()
+{
+		//  perform some work
+}
+
+// Asynchronous
+public   Task   DoSomeWorkAsync()
+{
+		//  perform some work
+}
+
+
+-----------------------------------------
+
+public  string   GetData() {  ....   }
+
+public  Task<string>   GetDataAsync() {  ....   }
+		
+------------------------------------------------------------------------
+
+
+
+Task.Run();
+
+
+	public  Task   DoSomeWorkAsync()
+	{
+		return  Task.Run( () =>  
+		{
+				// some work --- logic
+				Thread.Sleep(1000);
+		});		
+	}
+
+
+	---   Task.Run() method executes code on a background thread  from the ThreadPool, and returns a Task that represent that work. 
+		
+		
+		
+		
+		
+		
+	async  Main()
+	{
+			await   GetDataAsync();		
+			await    SendDataAsync();		
+	}	
+		
+	
+		
+		async  --- modifer 
+		await --- operator
+		
+-----------------------------------------------------------------------------
+
+
+Http Request
+~~~~~~~~~~~
+
+	---  Make an Async  HTTP Request 
+	---  Get the response from server
+	---  Display in client application 
+	
+	
+	
+	a.    Server :    Running  API  Url			
+			https://www.w3schools.com/angular/customers.php	
+	
+	b.    Client:			Console Application
+	
+	
+			
+			Namespace :     System.Net.Http;
+			Class Name :   HttpClient
+			
+			Methods:			GetAsync(string  Url)
+			
+--------------------------------------------------------------
+
+AggregateException while performing Parallel Task Execution 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-->  AggregateException in C# is a special type of exception that acts as a container for multiple exceptions. 
+-->  It is primarily used in scenarios involving parallel programming, such as with the Task Parallel Library (TPL) and Parallel LINQ (PLINQ), where multiple operations can execute concurrently and potentially throw exceptions simultaneously on different threads.
+
+
+
+ 
