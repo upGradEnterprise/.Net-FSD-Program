@@ -1,0 +1,66 @@
+
+Day17(31-07-2025)
+~~~~~~~~~~~~~~~~~
+
+Joins and SubQueries in SQL Server
+
+
+
+Q:   Display Employee Names based on given department name 
+
+
+		IT
+		10
+		
+		SELECT ENAME FROM Employee WHERE deptno=10
+		
+		
+		SELECT ENAME FROM Employee 
+		WHERE deptno=( SELECT deptno FROM Dept WHERE Dname='IT' )
+		
+		
+		
+		
+Accounts  ---  Customer Details 
+
+Branch  ---      Branch details 
+
+
+"Madhapur" and  '"Kondapur"
+
+SELECT CustomerName FROM Accounts
+WHERE BranchId = (SELECT BranchId FROM Branch WHERE BranchName = 'Madhapur')
+
+
+
+
+
+
+
+
+
+
+
+	    d.  Create a table :   Users
+				Columns :  UserId , UserName, Password, ContactNumber, Address, City
+				
+		e.   Create a table :  Orders
+				Columns :   OrderId,  CartId,   OrderDate,   UserId
+							
+
+		Q:   Display orders who are placed from Hyd city 
+				
+		SELECT OrderId, OrderDate FROM Orders 
+		WHERE  UserId  
+		IN  (  SELECT  UserId  FROM Users Where City = 'Hyd'    )
+		
+		
+		SELECT * FROM Emps
+		WHERE Deptno 
+		NOT IN  (  SELECT Deptno FROM Dept WHERE Loc='Mumbai'  )
+
+--------------------------------------------------------------------------------------------------
+
+
+
+ 
