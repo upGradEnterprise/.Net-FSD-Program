@@ -1,0 +1,49 @@
+Day-19 (4th August, 2025)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Validate incoming data while enter data into tables:
+
+
+	1.   Data Types
+	2.   Constraints   (Check, Default, Unique, ....)
+	3.   Triggers:
+	
+			-->  A trigger is a special type of stored procedure(function/method) that automatically executes in response to a specific database event. 
+			
+			--> Triggers are used to enforce data integrity, implement business rules, and automate tasks within the database.
+	
+		--> Events that occurs while we perform operations on rows:
+						Eg:   INSERT, UPDATE, DELETE
+						
+						
+	
+	4.   Validation Logic in  SP  (or)  Application :
+	
+				---  In SP, add logic to perform some operations
+				---  Execute more than one Sql command as Unit
+				
+			In Application :	
+							.NET Application (Console / Windows / Web )
+							
+							
+							
+							
+			
+			
+
+To view meta(structure) of database/table  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+>		EXEC sp_help
+>		EXEC sp_help  Authors
+
+ 
+ 
+ Renaming database objects (Tables / triggers / Stored Procedures )
+ 
+	>		Syntax:    EXEC sp_rename 'Old_name', 'New_name';
+	>		Eg:    		 EXEC sp_rename   'Customer',  'Customers';
+
+
