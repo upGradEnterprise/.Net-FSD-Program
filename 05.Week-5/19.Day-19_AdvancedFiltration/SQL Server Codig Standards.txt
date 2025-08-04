@@ -1,0 +1,14 @@
+
+Coding Standards and Naming conventions in SQL Server
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Capitalize SQL Keywords
+Avoid using  * in SELECT command , specify required columns in to improve performance and clarity. 
+Use meaningful aliases:    Employee e,  Department d  etc…
+ Avoid reserved words(key words) as identifiers  (table names, column names etc..)
+Use singular column names (FirstName, LastName)
+Use -- for single-line and /* */ for block comments.
+Use Proper Prefix :   PK, FK, DEFLT, CHK    (for constrains)
+Tables Names :    Employees, Students, Reports 
+Use proper prefix for PL SQL items :  trg (trigger), usp(userdefined stored procedure), udf (user defined function)
+Boolean values column names / variable names  should be prefixed with Is, Has, Can
+Prefix parameters with @  (trg, usp, udf)
