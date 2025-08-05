@@ -1,1 +1,41 @@
+
+
+Indexed  View  vs Standard View
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Indexed View: Automatically updates when the underlying table is modified.
+Standard View: Always reflects the latest data since it’s a query, not stored data.
+
+
+Views in SQL Server
+~~~~~~~~~~~~~~~~
+
+
+Standard Views:
+~~~~~~~~~~~~~~~
+-->If the view is a standard view (not indexed), it doesn’t store data and simply re-executes the query each time it’s accessed. 
+--> Thus, it will always reflect the latest data from the underlying tables without needing "updates."
+
+Indexed View:
+~~~~~~~~~~~~
+-->  Automatically maintained by SQL Server.
+--> Requires Enterprise Edition for full performance benefits.
+--> Strict requirements on the view definition.
+--> Ideal for scenarios where you need real-time, synchronized data with minimal maintenance.
+
+
+
+
+-----------------------------------------------------
+Indexes in SQL Server
+~~~~~~~~~~~~~~~~~~~~~~
+
+
+Best Practices 
+~~~~~~~~~~~~~~
+
+< 5%   			fragmentation  	---		Do Nothing
+5-30%      fragmentation  	---		Use Reorganize 
+>30%      fragmentation  	---		Use Rebuild
+
+
  
