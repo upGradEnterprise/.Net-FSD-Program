@@ -1,1 +1,41 @@
  
+Day22(7th August, 2025)
+~~~~~~~~~~~~~~~~~~~~~
+
+
+Working with Stored Procedures in  SQL Server
+-------------------------------------------------------------------
+
+    USP --- user defined stored PROCEDURE    (prefix)
+
+	CREATE PROCEDURE  usp_getEmpCount
+	AS
+	BEGIN
+				-- statements 
+	END;
+
+		
+
+   EXECUTE  usp_getEmpCount
+   EXEC 		 usp_getEmpCount
+   
+   
+   ----------------------------------------------------------------
+   
+   
+   
+   
+   
+   
+   
+   IS NULL Operator:     
+		SELECT * FROM Emps WHERE Deptno IS NULL;
+   
+   
+   ISNULL()  function :    It allows you to replace the NULL value with a specified replacement value 
+   
+	ISNULL(@Total, 0)		
+					If @Total is Null, then it replace with zero
+					If @Total, not null ,  it returns the value of @Total as it is
+   
+   
