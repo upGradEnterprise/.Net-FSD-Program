@@ -1,0 +1,12 @@
+Additional Context
+
+Database Schema: The solutions assume a SQL Server database (UniversityDB) with tables:
+
+Students (StudentID, FirstName, LastName).
+Courses (CourseID, CourseCode, CourseName, CreditHours, MaxCapacity, PrerequisiteCourseID).
+StudentCourses (StudentID, CourseID, EnrollmentDate, Grade, Status).
+
+
+Objectives: The solutions aim to improve efficiency, reduce errors, ensure data consistency, and enhance scalability in the university’s database operations.
+
+Constraints: The solutions must operate within the SQL Server environment, handle concurrent access, and adhere to university policies (e.g., grade scales, enrollment rules).
