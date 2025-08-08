@@ -1,1 +1,57 @@
  
+Day23 (8th August, 2025)
+~~~~~~~~~~~~~~~~~~~~~~
+
+Execution Plans in SQL Server
+
+		
+		SELECT  b.title,  a.auther_name FROM Books
+		JOIN Auothors a  
+		ON  a.author_id = b.author_id
+		WHERE b.price >  200 
+		order by b.title 
+
+
+	Query Execution: 	
+				a.  retrieve the data 
+				b.  indexes to use 	(clustered, non-clustered, filtered,...)
+				c.  joins  (retrieve the data  from multiples tables) 
+				d. filtration (where) 
+				e. sorting   (order by)
+
+
+------------------------------------------------
+
+Use Cases of SQL Server Profiler
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1. Performance Troubleshooting
+2. Query Debugging
+3. Auditing 
+4. Workload Analysis 
+
+
+
+
+Create a New Trace using Profiler
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	a.   Click File  Menu  -->   New Trace    (Connect the server)
+	b.   Provide the details in the "Trace Properties"  window :	
+					1.  Trace Name   :   MyDbTrace
+					2.  Template
+					3.  Save to File  :     MyDbTrace.trc
+
+
+	   Click "Run" to start the trace
+	   
+	   
+	   
+Note:
+--> Use Profiler on the test server or during low-traffic periods to avoid performance impact
+ 
+	   
+					
+					
+					
+
+
