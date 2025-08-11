@@ -85,6 +85,48 @@ Singleton
 			
 	
     	
+-----------------------------------------------------
+
+Builder Pattern
+~~~~~~~~~~~~~~
+
+Key Elements of the Builder Pattern:
+
+	a.   Product :    The complex object that is built 
+	b.   Builder(interface)  :   Defines the steps required to build/create the product
+	c.   Concrete Builder (class) :   Implements the Builder Interface
+	d.   Director :   Controls the construction process
+	
+
+
+------------------------------------------------------------
+
+
+
+Abstract Factory Design Pattern
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1.   Abstract Factory   (Interface)
+2.   Concrete Factory  (class)
+3.  Abstract Product  (Interface)
+4.   Concrete Product (class)
+5.  Client   ( class )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 
 
