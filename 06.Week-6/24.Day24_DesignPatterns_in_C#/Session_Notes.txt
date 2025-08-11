@@ -1,0 +1,92 @@
+Day24 ( 11th August, 2025)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Design Patterns  and SOLID Principles using C#
+--------------------------------------------------------------
+
+
+
+1.  What are Expression-Bodied Members in C#?
+
+	Usage:  
+				Method: 			public string GetName() => "Sahin Ali";
+				Property: 			public int Age => 30;
+				Constructor: 		public Person(string name) => Name = name;
+
+2.  What is Lazy<T>  class in C#?  Why do we use?
+
+	Lazy<T> lazyObject = new Lazy<T>(() => new T());
+	Lazy<Employee> lazyObject = new Lazy<Employee>(() => newEmployee());
+	
+	lazyObject.value.Method();		//  access method of type T
+	
+	
+
+	
+
+3.  What is switch expression in C#?
+
+	string GetSize(int size) => size switch
+	{
+			< 5    =>   "Small",
+			>= 5 and < 10   => "Medium",
+			_ => "Large"
+	};
+
+--------------------------------------------------
+
+
+
+
+
+Design Patterns
+~~~~~~~~~~~~~~
+--> Well-defined solutions for the problems that occurs in software development.
+--> Common for all technologies  (C#, Java, etc... )
+-->  Not like a rules, recommanded practices for software developers. 
+
+
+
+
+
+
+
+  // Usage
+  IShape shape;
+
+shape  = ShapeFactory.GetShape("rectangle");
+shape.Draw();
+  
+  
+shape  = ShapeFactory.GetShape("hello");
+shape.Draw();
+
+
+1.  Interface:		IShape
+2. Classes :   		Rectangle  : IShape
+							Circle  :  IShape 
+3. Factory :			 ShapeFactory Class  
+										GetShape() :   IShape
+
+
+
+
+
+--------------------------------------------------------
+
+
+Singleton 
+~~~~~~~~~
+
+	1.   private constructor
+	2.   static method / property   GetInstance 
+	
+			
+	
+    	
+	
+
+
+
+  
