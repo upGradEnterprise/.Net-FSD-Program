@@ -1,1 +1,9 @@
  
+Day25 (12-08-2025)
+~~~~~~~~~~~~~~~~~~
+
+
+1. What is 	code smell in software development ?
+2. What is refactoring? Why do we implement refactoring? 
+
+
