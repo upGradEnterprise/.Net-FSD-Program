@@ -1,0 +1,170 @@
+
+
+1.   What is Client and Server in Web Applications development?
+2.   What is the responsibilities of Server Side Technologies ?
+3.   What are examples of Server Side Technologies?   Examples of Web Server? 
+4. What are examples of Client Side Technologies? 
+
+
+
+
+
+Web Server  :     IIS,  IIS Express, Apache, XAAMP, ....... 
+
+Server Side Technologies :    ASP.NET Core (C#),  Spring (Java),  Node-Express JS, PHP,...
+
+Client  (Browser) :        Chrome, IE, Ege, Firefox, etc.... 
+
+Client Side Technologies :    HTML, CSS , JS
+												   Bootstrap, Angular, React, Vue...
+
+
+ 
+		
+		
+		--------------------------------------
+		
+		
+		
+ASP.NET core project structure
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+	1. Startup.cs    (old version)		----  middleware, service 
+	2. Program.cs   
+	-------------
+	
+	Program.cs 	(middleware, service )
+	
+
+
+
+MVC Applications in ASP.NET Core
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	
+Controller
+
+-->    	HomeController.cs	(Default)
+			StudentsController.cs
+			EmployeesController.cs
+			AdminController.cs
+			
+
+
+
+		Request				--->			Method of Controller Class 	
+
+Index  (Default Method)
+Privacy  
+
+
+Login
+AboutUs
+ContactUs 
+
+
+
+Action Methods:		Process the request 
+
+
+a.   A controller can have multiple action method to handle multiple requests. 
+b.   Contains the logic to handle the request
+c.   Action Methods returns the corresponding view
+			 return View();
+			 
+			  public IActionResult Index()
+			 {
+				 // Logic to handle the request
+				 return View();			//  Returns View of Index Action 
+			 }
+
+
+
+Url Structure
+~~~~~~~~~~~~~~~~
+
+		/Controller/Action 
+		/Home/Index
+		/Home/Privacy
+		/Home/Login
+		
+		/Admin/Login
+		/Admin/Registration
+		
+		/Employees/Create
+		/Employees/Edit
+		/Employees/List
+		
+	
+
+
+
+
+Views in MVC Application
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+view File name :  	*.cshtml
+Razor Engine 	---- process view pages 
+
+
+@{
+	string  uname =  "Scott";
+}
+
+
+
+<h1>Hi @uname, Good morning....!</h1>
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+
+Home :			https://localhost:7227/
+		Default controller :  Home
+		Default action :   Index 
+		
+		
+Privacy:			https://localhost:7227/Home/Privacy
+
+						https://localhost:7227/Home/Index
+						
+						
+						
+--------------------------------------------------------------------------------------
+
+
+
+
+
+Task :   To display employee details in view 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Model:		Employee.cs
+		--  Define employee class with required properties 
+		
+Controllers :
+
+	Send Employee object  to View 
+
+	Action Method 
+			View  
+
+View :		Display employee object  (Model  data )
+
+
+
+ 
+
+
+
+
+
