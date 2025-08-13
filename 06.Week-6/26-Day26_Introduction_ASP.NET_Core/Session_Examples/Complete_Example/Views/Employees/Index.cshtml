@@ -1,0 +1,32 @@
+﻿@model List<Employee>
+
+ 
+@{
+    ViewData["Title"] = "Employees Index";
+}   
+
+<h2>Employees List</h2> 
+<hr/>
+
+
+<table class="table">
+    <tr class="table-primary">
+        <th>Employee Id</th>
+        <th>Name</th>
+        <th>Job</th>
+        <th>Salary</th>
+        <th>Department No</th>
+    </tr>
+
+    @foreach (var emp in Model)
+    {
+        <tr class="table-success">
+            <td>@emp.Id</td>
+            <td>@emp.Name</td>
+            <td>@emp.Job</td>
+            <td>@emp.Salary</td>
+            <td>@emp.Deptno</td>
+        </tr>
+    }
+
+</table>

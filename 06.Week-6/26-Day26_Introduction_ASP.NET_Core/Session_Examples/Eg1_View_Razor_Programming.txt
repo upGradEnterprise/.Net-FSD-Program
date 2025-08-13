@@ -1,0 +1,54 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@{
+    string uname = "Scott";
+    string email = "Scott@gmail.com";
+
+    int count = 10;
+
+    string[] colors = { "Red", "Green", "Blue", "Yellow" };
+}
+
+
+
+<div>
+
+
+    <h3>Welcome to ASP.NET Core!  Razor Programming</h3>
+
+    <h3>Hi @uname, Good morning...!</h3>
+    <h3> @DateTime.Now.ToString("d") </h3>
+
+    <div>
+        User Name : @uname  <br/>
+        Email : @email <br/>    
+    </div>
+
+
+    <div>
+        @if(count > 10 )
+        {
+            <h3>Count is greater than 10</h3>
+        }
+        else
+        {
+            <h3>Count is less than or equal to 10</h3>
+        }
+    </div>
+
+
+    <div>
+        <h3>Colors</h3>
+        <ul>
+            @foreach(string item in colors)
+            {
+                 <li>@item</li>
+            }           
+        </ul>
+    </div>
+
+        
+  
+</div>
