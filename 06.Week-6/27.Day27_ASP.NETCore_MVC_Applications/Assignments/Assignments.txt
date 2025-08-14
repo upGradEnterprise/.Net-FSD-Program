@@ -1,0 +1,12 @@
+
+
+1.  Perform CRUD Operations on  Products  Data. Product details should include :  Id, Name, UnitPrice, UnitsInStock, Category etc.. 
+
+2.  Complete pending operations in yesterday example using Forms concept for search operations etc...  Add  Create/Edit/ Delete Operations in yesterday example. 
+
+3.  Study the following concepts:
+			a.    Layout View -- @RenderBody()
+			b.    What is  Model Binding?
+			c.    What is  ModelState in ASP.NET Core MVC Application? How to use?
+			d.    What is the use of   asp-validation-for   tag helper attribute?
+
