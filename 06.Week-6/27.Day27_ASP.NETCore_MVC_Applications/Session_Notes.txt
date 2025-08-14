@@ -54,7 +54,17 @@ https://localhost:7201/Employees/Details
  
  
  
+ 
+ 
+ -->    The below input tag targets Id property of Model class 
 	
 	
+ <input asp-for="Id"  />      
+ <input asp-for="Name"  />      
+ <input asp-for="Job"  />      
+ <input asp-for="Salary"  />      
+ <input asp-for="Deptno"  />      
+
+Note: The above  asp-for attribute values should be matching with model class property names.
 
 
