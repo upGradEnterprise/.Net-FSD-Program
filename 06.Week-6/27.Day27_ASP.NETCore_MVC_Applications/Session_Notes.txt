@@ -1,0 +1,60 @@
+Day27 (14th August, 2025)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Data Sharing from Controller to View
+
+
+	1.  ViewData
+	2.  ViewBag   
+	3.  TempData 
+	4.  STV (Strongly Typed View)
+	
+				a.  Create Model Class   (M)
+				b.  Create Model Class Object to store data   (C)
+				c.   Send model object to View   (C)
+				d.   Access model object's data in View   (V)
+
+
+Note:  ViewData and ViewBag is available only for one action method  execution (along with its views);   Every action method having its own ViewData / ViewBag.  
+
+
+
+
+
+
+CRUD Operations on Employee Data
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+C
+R		---		Read All Items
+					Read Single Item
+U
+D
+
+
+
+
+https://localhost:7201/Employees/Details
+
+
+
+
+
+<a  href="/Employees/Details/@emp.Id">Details</a>
+
+
+
+ <a   asp-controller="Employees"  asp-action="Details" asp-route-id="@emp.Id">Details</a>
+ <a   asp-action="Details" asp-route-id="@emp.Id">Details</a>
+ 
+ 
+ 
+ 
+ 
+	
+	
+
+
