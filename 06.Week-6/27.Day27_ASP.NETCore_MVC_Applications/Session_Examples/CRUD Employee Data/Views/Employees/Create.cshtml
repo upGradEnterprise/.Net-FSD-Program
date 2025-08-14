@@ -1,0 +1,40 @@
+﻿@model WebApplication50.Models.Employee
+
+
+@{
+    ViewData["Title"] = "Create Employee";
+}   
+
+<h3>Create New Employee</h3>    
+<hr/>
+
+<form asp-action="create" method="post">
+
+    <div class="form-group">
+            <label asp-for="Id" class="form-label"></label>
+            <input asp-for="Id" class="form-control" />           
+    </div>
+
+
+    <div class="form-group">
+            <label asp-for="Name" class="form-label"></label>
+            <input asp-for="Name" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Job"></label>
+            <input asp-for="Job" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Salary"></label>
+            <input asp-for="Salary" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Deptno"></label>
+            <input asp-for="Deptno" class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-success">Create</button>
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</form>    
+
+
