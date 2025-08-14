@@ -1,0 +1,50 @@
+﻿
+@model List<WebApplication50.Models.Employee>
+
+@{
+     ViewData["Title"] = "Employees CRUD";
+}   
+
+
+<h3>Performing CRUD on Employees Data</h3>
+<hr/>
+
+
+<a asp-action="Create">Create New</a>
+
+<br/>
+<br/>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Designation</th>
+            <th>Salary</th>
+            <th>Deptno</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var emp in Model)
+        {
+            <tr>
+                <td>@emp.Id</td>
+                <td>@emp.Name</td>
+                <td>@emp.Job</td>
+                <td>@emp.Salary</td>
+                <td>@emp.Deptno</td>     
+                <td>
+                   
+                    <a  asp-action="Details" asp-route-id="@emp.Id">Details</a> |
+                    <a  asp-action="Edit" asp-route-id="@emp.Id">Edit</a> |
+                    <a  asp-action="Delete" asp-route-id="@emp.Id">Delete</a>  |
+                   
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+        
+
