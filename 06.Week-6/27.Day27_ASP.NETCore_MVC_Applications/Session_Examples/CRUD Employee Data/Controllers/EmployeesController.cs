@@ -1,11 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using WebApplication50.Models;
 
 namespace WebApplication50.Controllers
 {
     public class EmployeesController : Controller
     {
-        List<Employee> employees = new List<Employee>
+        public static List<Employee> employees = new List<Employee>
                 {
                     new Employee { Id = 1, Name = "Alice", Job = "Manager", Salary = 75000, Deptno = 10 },
                     new Employee { Id = 2, Name = "Bob", Job = "Developer", Salary = 65000, Deptno = 20 },
@@ -23,6 +23,19 @@ namespace WebApplication50.Controllers
         {
             var emp = employees.FirstOrDefault(x => x.Id == id);
             return View(emp);
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Employee emp)
+        {
+            employees.Add(emp);
+            return RedirectToAction("Index");
         }
 
 
