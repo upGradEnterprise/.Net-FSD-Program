@@ -1,4 +1,3 @@
- 
 
 Day28(18th August, 2025)
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -110,14 +109,31 @@ Step-3:    Prepare the view to handle validation error message:
 			
 Step-4:  Include validation jquery libraries in view page:
 
-			@section Scripts {
-									<!-- jQuery validation + Unobtrusive scripts -->
-					<partial name="_ValidationScriptsPartial" />
-			}
-						
+				@section Scripts {
+										<!-- jQuery validation + Unobtrusive scripts -->
+						<partial name="_ValidationScriptsPartial" />
+				}
+							
 
 				
 
 		   
-		   
+[Required]
+public int Id { get; set; }
+
+ [Required(ErrorMessage = "Employee Name is required")]
+ [StringLength(50, MinimumLength = 3, ErrorMessage = "Name must be 3–50 characters long")]
+ public string Name { get; set; }
 		
+
+ [RegularExpression(@"^[a-zA-Z\s]+$", ErrorMessage = "Job must contain only letters")]
+ public string Job { get; set; }
+ 
+ 
+ 
+  [Range(3000, 200000, ErrorMessage = "Salary must be between 3000 and 200000")]
+ public decimal Salary { get; set; }
+ 
+ 
+[Range(10, 99, ErrorMessage = "Deptno should be between 10 and 99")]
+ public int Deptno { get; set; }
