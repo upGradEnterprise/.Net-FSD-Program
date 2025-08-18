@@ -1,0 +1,27 @@
+﻿@model WebApplication50.Models.Employee
+
+@{
+    ViewData["Title"] = "Employee Details";
+}
+
+<h3>Delete Employee Details</h3>
+<hr />
+<h3>Are you sure you want to delete this?</h3>
+
+<div class="card">   
+    <div class="card-body">
+        <h5 class="card-title"> @Model.Name (Id :  @Model.Id)</h5>
+        <p class="card-text">Designation: @Model.Job</p>
+        <p class="card-text">Salary: @Model.Salary</p>
+        <p class="card-text">Department No: @Model.Deptno</p>
+    </div>
+
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">Delete</button>       
+    </form>
+
+
+</div>
+<br />
+<a asp-action="Index" class="btn btn-secondary">Back to List</a>

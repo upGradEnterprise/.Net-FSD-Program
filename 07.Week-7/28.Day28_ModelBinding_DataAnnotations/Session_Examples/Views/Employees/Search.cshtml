@@ -1,0 +1,41 @@
+﻿@model IEnumerable<WebApplication50.Models.Employee>
+
+@{
+    ViewData["Title"] = "Employees CRUD";
+}
+
+
+<h3>Search Employees Data</h3>
+<hr />
+
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Designation</th>
+            <th>Salary</th>
+            <th>Deptno</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var emp in Model)
+        {
+            <tr>
+                <td>@emp.Id</td>
+                <td>@emp.Name</td>
+                <td>@emp.Job</td>
+                <td>@emp.Salary</td>
+                <td>@emp.Deptno</td>
+               
+            </tr>
+        }
+    </tbody>
+</table>
+
+<hr/>
+<a asp-action="Index" class="btn btn-secondary">Back to List</a>
+

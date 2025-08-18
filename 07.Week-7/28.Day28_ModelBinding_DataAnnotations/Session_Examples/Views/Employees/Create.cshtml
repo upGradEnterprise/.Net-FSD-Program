@@ -1,0 +1,51 @@
+﻿@model WebApplication50.Models.Employee
+
+@{
+    ViewData["Title"] = "Add Employee";
+}
+
+<h2>Add Employee</h2>
+
+<h1 class="text-danger">@ViewBag.Message</h1>
+ 
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Id" class="control-label"></label>
+        <input asp-for="Id" class="form-control" />
+        <span asp-validation-for="Id" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Job" class="control-label"></label>
+        <input asp-for="Job" class="form-control" />
+        <span asp-validation-for="Job" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Salary" class="control-label"></label>
+        <input asp-for="Salary" class="form-control" />
+        <span asp-validation-for="Salary" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Deptno" class="control-label"></label>
+        <input asp-for="Deptno" class="form-control" />
+        <span asp-validation-for="Deptno" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</form>
+
+
+@section Scripts {
+    <!-- jQuery validation + Unobtrusive scripts -->
+    <partial name="_ValidationScriptsPartial" />
+}
