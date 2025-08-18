@@ -1,1 +1,123 @@
  
+
+Day28(18th August, 2025)
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+			a.    Why do we use  Data Annotations in ASP.NET Core?
+			b.    What is  Model Binding?
+			c.    What is  ModelState in ASP.NET Core MVC Application? How to use?
+			d.    What is the use of   asp-validation-for   tag helper attribute?
+			
+			
+		
+
+
+ [HttpGet]
+ public IActionResult Create()
+ {      
+     return  View();
+ }		
+		
+		
+ [HttpPost]
+ public IActionResult Create(Employee emp)
+ {
+      employees.Add(emp);
+     return RedirectToAction("Index");
+ }
+ 
+ -------------
+  
+   public IActionResult Details(int id)
+  {
+      
+  }
+ ------------------
+ 
+  [HttpPost]
+ public IActionResult Login(string username, string password)
+ {
+		// logic 
+ }
+            
+ 
+ 
+ 
+<input asp-for="Id"  />			----			<input type="text"  id="Id"  Name="Id" />
+   
+   
+   
+			
+	
+/Employee/Details/1
+
+
+/Employee/Search?job=Manager&deptno=10
+
+
+	
+			
+			
+
+Data Annotations and Validations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Step-1:    Apply data annotation attributes on Model class properties
+
+		Namespace :     System.ComponentModel.DataAnnotations;
+
+
+		class  Employee
+		{
+			[Required]
+			public int Id { get;  set; }
+			.....
+		}
+
+			
+		[Required]			//  Default message will be generated 
+		[Required(ErrorMessage="Custom Error Message")]
+		
+		
+Step-2:     Model Binding at action method and verify the validations status 
+
+			 [HttpPost]
+			 public IActionResult Create(Employee emp)
+			 {
+				 
+				 if(ModelState.IsValid)
+				 {
+						// make sure that all validations passed before adding emp object 
+					employees.Add(emp);
+						return RedirectToAction("Index");	 
+				 }
+				 else
+				 {
+					 return View();
+				 }
+				 
+			 }
+	
+
+Step-3:    Prepare the view to handle validation error message:
+
+			 <label asp-for="Id" class="control-label"></label>
+			<input asp-for="Id" class="form-control" />
+			<span asp-validation-for="Id" class="text-danger"></span>
+			
+			
+			
+Step-4:  Include validation jquery libraries in view page:
+
+			@section Scripts {
+									<!-- jQuery validation + Unobtrusive scripts -->
+					<partial name="_ValidationScriptsPartial" />
+			}
+						
+
+				
+
+		   
+		   
+		
