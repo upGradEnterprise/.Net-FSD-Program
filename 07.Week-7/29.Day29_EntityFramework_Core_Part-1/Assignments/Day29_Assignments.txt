@@ -1,0 +1,9 @@
+
+
+1.  Create ASP.NET Core MVC Application to perform CRUD operations on Products Data.  (Simulate the same example which I explained in the session).
+
+
+2.  Recreate Movie Catalogue Case Study using EF Core. Include all CURD operations in this example. 
+
+
+  
