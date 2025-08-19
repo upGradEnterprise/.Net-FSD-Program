@@ -1,1 +1,34 @@
  
+
+Day29 (19th August, 2025)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+1. What is ORM?
+2. What is Entity Framework?
+3. What is NuGet Package Manager? 
+
+
+----------------------------------------------------------------
+
+
+Register ApplicationDbContext as depedent class in Program.cs
+
+
+	builder.Services.AddDbContext<ApplicationDbContext>(options =>
+			options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"
+	)));
+
+
+
+public class ProductsController : Controller
+{
+		private readonly ApplicationDbContext _context;
+		
+		public ProductsController(ApplicationDbContext context)
+		{
+			
+		}
+}
+
