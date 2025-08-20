@@ -1,0 +1,50 @@
+﻿@model IEnumerable<WebApplication1.Models.Dept>
+
+@{
+    ViewData["Title"] = "Depts";
+}
+
+<h1>Depts</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Dname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Loc)
+            </th>
+
+            <th>
+                Employee Names
+            </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Loc)
+            </td>
+
+            <td>
+                <ol>
+                    @foreach (var emp in item.Emps)
+                    {
+                        <li>@emp.Ename</li>
+                    }   
+                </ol>
+            </td>
+            
+        </tr>
+}
+    </tbody>
+</table>
