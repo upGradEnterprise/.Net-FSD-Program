@@ -1,1 +1,74 @@
  
+Day30(20th August, 2025)
+~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+1. What is Navigation property in EF Model class?
+2. How to understand relationships in EF? How many types?
+3. How to implement Db-First Approach in EF Core?
+
+
+
+Steps to implement DB First Approach
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Step 1: Create database & tables in SQL Server.
+Step 2: Create ASP.NET Core MVC project.
+Step 3: Install EF Core packages.
+Step 4: Scaffold database with Scaffold-DbContext.
+
+				Scaffold-DbContext 
+							"Name=DefaultConnection" 
+							Microsoft.EntityFrameworkCore.SqlServer 
+							-OutputDir Models
+
+Step 5: Register DbContext in Program.cs.
+Step 6: Inject the Context class in Controller as dependent and  Use entities in controllers.
+Step 7: Create views for CRUD.
+Step 8: Run application & test.
+Step 9: Re-scaffold when schema changes.
+
+
+Scaffold-DbContext "Server=DESKTOP-B3L5S5L\\SQLEXPRESS;Database=ProductsDb;Integrated Security=True;Trusted_Connection=True;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+
+
+
+Scaffold-DbContext "Name=DefaultConnection" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+Syntax:   
+Scaffold-DbContext     <connectionString>   provider     outpurdir 
+
+
+Entity(Table) Specific Scaffolding :
+
+Scaffold-DbContext "Name=DefaultConnection" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models   -Tables  Emps,Depts 
+
+
+------------------------------------------------------
+
+
+Working with Navigation Property
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Dept    
+		 Deptno
+		 Dname
+		 Loc
+		 Employees  (Collection)    ---  Navigation Property 
+
+
+Emp 
+			Empno
+			Ename
+			Job
+			Salary
+			Deptno 
+			DeptnoNavigation     ---  Navigation Property 
+			Dept     ---  Navigation Property 
+
+
+
+
+
