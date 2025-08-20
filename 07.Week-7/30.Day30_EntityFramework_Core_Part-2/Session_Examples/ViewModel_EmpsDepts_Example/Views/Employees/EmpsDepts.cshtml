@@ -1,0 +1,60 @@
+﻿@model WebApplication1.Models.EmpsDeptsVM
+
+@{
+    ViewData["Title"] = "Employees and Departments";
+}   
+
+
+<h2>Display Employees and Departments using ViewModel</h2>
+<hr/>
+
+
+<h3>Employee Data</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>Employee Name</th>
+            <th>Employee Job</th>
+            <th>Employee Salary</th>
+            <th>Department No.</th>              
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var emp in Model.Emps)
+        {
+            <tr>
+                <td>@emp.Empno</td>
+                <td>@emp.Ename</td>
+                <td>@emp.Job</td>
+                <td>@emp.Salary</td>
+                <td>@emp.Deptno</td>
+            </tr>
+        }
+    </tbody>    
+</table>
+
+
+<hr/>
+
+<h3>Deptartments Data</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Department Id</th>
+            <th>Department Name</th>
+            <th>Department Loc</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var emp in Model.Depts)
+        {
+            <tr>
+                <td>@emp.Deptno</td>
+                <td>@emp.Dname</td>
+                <td>@emp.Loc</td>                
+            </tr>        
+        }
+    </tbody>
+</table>
+
