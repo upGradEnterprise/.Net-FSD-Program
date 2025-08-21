@@ -51,6 +51,10 @@ It's primarily known for its ability to generate interactive API documentation a
 	
 
 
+var connStr = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connStr));
+
+
 
 
 
