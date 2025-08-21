@@ -1,0 +1,59 @@
+
+Day31(21st August, 2025)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+1. What is [ForeignKey]  attribute in Model class?
+2. What are HTTP Status Codes? Categories? 
+3. Diff. between Web Application vs API Application 
+4. What is DTOs? Why do we use DTOs? 
+
+
+
+
+
+
+
+
+
+
+
+
+APIs URI 
+~~~~~~~
+
+		 http://localhost:545454/api/products
+		 http://localhost:545454/api/products/1
+		 
+		 
+		 http://localhost:545454/api/emps
+		 http://localhost:545454/api/emps/1
+		 
+		 
+
+API Test Tools  (API Client tools):
+
+		a.  Swagger
+		b.  Postman 
+		
+		
+Note:
+
+1. By default all WEB api projects are configured with swagger.
+2. Swagger is a set of open-source tools and a specification used for designing, building, documenting, and consuming RESTful APIs. 
+It's primarily known for its ability to generate interactive API documentation and automate various development tasks.  
+3.  Required Packages:   	Swashbuckle.AspNetCore
+
+
+
+		
+	
+
+
+
+
+
+
+
+
