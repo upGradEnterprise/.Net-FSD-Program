@@ -1,2 +1,36 @@
 Day32 (22nd August, 2025)
 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+v1:  
+	http://localhost:645645/api/products 
+	http://localhost:645645/api/v1/products 
+		
+v2:
+	http://localhost:645645/api/products 
+	http://localhost:645645/api/v2/products 
+
+
+
+
+
+ProductController
+			[MapVersion("1.0")]
+			GetAll() 			----		v1
+
+			[MapVersion("2.0")]
+			GetAllV2() 			----		v2
+
+-------------------------------------------------------
+
+v1/ProductController
+		
+v2/ProductController
+
+
+
+
+using Microsoft.AspNetCore.Mvc.Versioning;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
+
+
