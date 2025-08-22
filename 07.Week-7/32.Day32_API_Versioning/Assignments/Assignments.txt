@@ -1,0 +1,13 @@
+
+1.  Create ASP.NET Core MVC Application to implement CRUD Operations on Claims data.   (Refer the Mini-project documentation). 
+		a.  Use EF Core - Code First Approach 
+		b. Prepare Controller to implement  
+
+Theory Questions:   (Make a documentation with your study notes)				
+	2.  What is Content Negotiation?  How it is related to Web API?  
+    3.  How would you deprecate an API version gracefully?	
+	4.   Study about Repository and Service Pattern in ASP.NET Core?  How to implement?  
+				Hint : No need to implement practically today.  Observe some examples on Internet 
+	
+ 
+ 
