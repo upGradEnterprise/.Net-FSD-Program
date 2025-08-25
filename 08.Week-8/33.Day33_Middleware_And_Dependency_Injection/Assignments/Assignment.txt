@@ -1,0 +1,9 @@
+1. Study Repository and Service product example, Add the remaining operations like :   Create, Edit and Delete.  
+
+		
+2.  Update Claims CRUD  Operations example with repository and service pattern on the previous assignment   (Refer the Mini-project documentation). 
+		a.  Use EF Core - Code First Approach 
+		b. Prepare Controller to implement  
+		
+		
+		
