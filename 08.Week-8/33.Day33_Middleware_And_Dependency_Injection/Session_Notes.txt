@@ -1,1 +1,32 @@
    
+
+Day33 (25th August, 2025)
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+Repositories and Services Pattern in ASP.NET Core
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+1.  [ Models ]
+			a.  Entity Classes (Refers the Tables)
+			b.  AppDbContext Class
+			
+2.  [ Repositories ]
+				IProductRepository.cs	
+				ProductRepository.cs	
+				
+3.    [ Services ]
+			IProductService.cs
+			ProductService.cs
+			
+4.    Controllers
+			ProductController.cs
+			
+ 
+					
+			
+
+
+
