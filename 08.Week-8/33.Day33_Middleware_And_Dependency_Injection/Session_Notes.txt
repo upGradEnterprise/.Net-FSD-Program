@@ -1,4 +1,3 @@
-   
 
 Day33 (25th August, 2025)
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -28,5 +27,15 @@ Repositories and Services Pattern in ASP.NET Core
 					
 			
 
+
+
+-------------------------------------
+
+
+Custom Middleware
+~~~~~~~~~~~~~~~~~~~~
+
+1.  	API Key verification in request header
+2.     Block the couple of IP addresses 
 
 
