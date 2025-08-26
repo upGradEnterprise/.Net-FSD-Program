@@ -1,0 +1,31 @@
+Day34(26th August, 2025)
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+React App				---------->							ASP.NET CORE API
+
+
+
+Login  Page  (UI)   		----		 
+					http://localhost:465456/api/Users
+							{ userid , password }
+					
+																			----  Verify uid, pwd   
+get and store the token 		<-----				Send token to client app..	
+
+
+---------------------------------------------------
+Request Url
+				http://localhost:465456/api/Products
+	
+Request Headers:			
+			Token 	:    jaskdf6asdf-asdf4sd6fs-adfsdfdsf545
+	
+-----------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
