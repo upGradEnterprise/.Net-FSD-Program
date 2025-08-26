@@ -1,0 +1,6 @@
+1.  Study the example (JWT Authentication) that we discussed in the session. 
+2.  Implement the JWT Authentication in any of the API example that you created in prev. assignment. 
+3.  Study the following points:
+		a.   What is Cookie based Authentication?
+		b.   Diff. between Cookie based Authentication  vs Token based Authentication?
+		c.   How does ASP.NET Core Identity works internally?
