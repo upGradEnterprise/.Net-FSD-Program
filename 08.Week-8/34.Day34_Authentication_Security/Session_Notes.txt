@@ -29,3 +29,65 @@ Request Headers:
 
 
 
+
+
+
+JWT Details (appseetings.json)
+		a.  Add Authentication details in Program.cs
+		b.  Generate token 
+		
+		
+		
+		
+		
+UserModel userObj = 	usersList.Where(x => x.UserName ==
+requestUser.UserName && x.Password == requestUser.Password).FirstOrDefault();
+
+
+
+
+
+
+Access current user details in the controller action  methods:
+		 var  user = HttpContext.User;
+		 string str = user.Identity?.Name;
+		 var roles =  user.FindAll(ClaimTypes.Role).ToList();   
+		 
+ --------------------------------------------------------
+ 
+ 
+ Configure swagger for integrating authorization tokens along with request:
+ 
+  
+builder.Services.AddSwaggerGen(opt =>
+{
+    opt.SwaggerDoc("v1", new OpenApiInfo { Title = "MyAPI", Version = "v1" });
+    opt.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        In = ParameterLocation.Header,
+        Description = "Please enter token",
+        Name = "Authorization",
+        Type = SecuritySchemeType.Http,
+        BearerFormat = "JWT",
+        Scheme = "bearer"
+    });
+
+    opt.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type=ReferenceType.SecurityScheme,
+                    Id="Bearer"
+                }
+            },
+            new string[]{}
+        }
+    });
+});
+ 
+
+ 
+		 
