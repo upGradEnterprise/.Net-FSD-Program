@@ -1,0 +1,20 @@
+1.   Create a class library with the following requirement:
+			a.  Library :  UserValidationLib
+			b.  Class :    UserValidationClass
+			c.  Method:
+						IsValidUser(string uid, string pwd)
+						
+				Hint : It should return bool, if the given uid and pwd matching with the required values.  Take the static values to compare (Admin, Admin123).
+				
+	
+2.  Publish that above library using NuGet Package Manager.
+
+3.  Import the above library from NuGet package in Console Application and verify the functionlaity.
+
+4.   Write the Unit Testcases for the above library using xUnit framework. Write the separate test cases for the following requirement:
+
+		a.   Testcases  to check valid user id and password
+		b.   Testcases  to check invalid user id and password
+		c.   Testcases  to check multiple user ids and passwords
+		d.   Testcases  to check if the uid or pwd is empty, throw the ArgumentException 
+		
