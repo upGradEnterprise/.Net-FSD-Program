@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<PackageId>MathUtilityLibrary</PackageId>
+	<Version>1.0.0</Version>
+	<Authors>NarasimhaRao T</Authors>
+	<Description>This is MathUtility Library provides mathematics releated functions.</Description>
+  </PropertyGroup>
+
+</Project>
