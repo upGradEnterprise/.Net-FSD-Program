@@ -1,1 +1,172 @@
  
+Day36(29th August, 2025)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+Unit Testing in .NET 
+~~~~~~~~~~~~~~~~~~~
+
+
+public class  MathUtilTestClass
+{		
+		[Fact]
+		public  void   MethodName()
+		{
+			// code to implement unit testing
+		}
+		
+		[Theory]
+		[InlineData(10,20)]
+		[InlineData(-10,-20)]
+		[InlineData(-10,0)]
+		public  void   MethodName()
+		{
+			// code to implement unit testing
+		}
+}
+	
+			
+-->    	[Fact]	:		Unit TestCases without parameters 
+-->       	[Theory]		and  [InlineData]
+
+	
+			
+
+
+
+AAA
+
+
+
+
+Sample Unit Testing Code
+~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
+    public class CalculatorTests
+    {
+        [Fact]
+        public void Add_TwoNumbers_ReturnsCorrectSum()
+        {
+            // Arrange
+            Calculator calculator = new Calculator();
+
+            // Act
+            int result = calculator.Add(5, 3);
+
+            // Assert
+            Assert.Equal(8, result);
+        }
+    }
+
+
+
+Assert.Equal()
+Assert.NonNull()
+Assert.Throws<DivideByZeroException>()
+
+
+
+
+
+
+ default :   internal  (classes are not accessible outside project)
+ 
+ 
+
+
+
+
+How to skip the test cases?
+
+-->      [Fact(Skip="Not implemented yet")]
+
+
+	
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------------
+Working with ClassLibraries
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+-->   Class Library   :     Collection of types (Classes, Interfaces, Struct, Enum, Delegates)
+
+		System.dll
+		System.Data.dll
+		...
+
+
+		a. Reusable in other projects
+		b. Access in other projects:
+					1.   Add Reference --> Select the ClassLibrary -->  
+									Import Namespace --> Access the members 
+							--  access from local system 
+							
+					2.   Using NuGet packages 				
+								---  access from remote / online 
+								---  available for all developers 
+								
+								
+
+
+
+
+
+
+Phase-1:			Create ClassLibrary
+Phase-2:			Access ClassLibrary in other projects 
+
+			1.   Local System :						
+						Add Reference --> Select the ClassLibrary -->  
+													Import Namespace --> Access the members 
+					
+							
+			2.   Using NuGet packages 				
+								---  access from remote / online 
+								---  available for all developers 
+								
+								
+								
+								
+Steps to publish and access class library using NuGet Package Manager
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~								
+								
+								
+1.   Create class Library 
+2.   Publish the library into NuGet portal
+3.   Add reference using NuGet Package Manager
+
+
+					
+
+ 
+
+					
+		
+dotnet  nuget  push   MathUtilityLibrary/bin/Release/MathUtilityLibrary.1.0.0.nupkg   --api-key   <KEY>   --source  https://api.nuget.org/v3/index.json 		
+					
+					
+					
+dotnet  
+			nuget  
+			push   
+			bin/Release/MathUtilityLibrary.1.0.0.nupkg   
+			--api-key  <KEY>   
+			--source  https://api.nuget.org/v3/index.json 		
+
+
+
+
+								
+								
