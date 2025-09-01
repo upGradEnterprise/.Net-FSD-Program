@@ -1,0 +1,84 @@
+
+1. What is Mocking in Unit Testing?
+2. Why do we use Mocking and Advantages?
+3. What are the examples of Mocking frameworks for .NET?
+
+
+
+
+Example on Unit Testing Mocking in ASP.NET Core API 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+1.  ASP.NET Core : Web API  
+
+		Controller   	--->      Repository 		-->               DbContext 		---->				Database  
+
+2.  xUnit Testing  Project 
+
+
+ Note:
+ 
+	->   Install the package using NuGet Package Manager:	
+					<PackageReference Include="NSubstitute" Version="5.3.0" />
+
+
+		Controller   --->        Mock Repository Object  
+		
+		
+		Hint :   
+			
+			a.  Create Mock Objects using Mocking Libraries (NSubtitute)
+			b.  Mock Repository object will be injected into controller object 
+			
+		
+--------------------------------------------------------------------------------------------------
+
+
+Steps to implement Testing Web API using Mocking with NSubstitute
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+1.    Create Web API with required functionality.
+2.    Create xUnit Project for Unit Testing 
+3.    Add Web API Project    as Project Reference   (Same as adding ClassLibrary as a Reference)
+		Hint :  This step helps us to access all API project classes
+		
+4.   Install the package using NuGet Package Manager:	
+					<PackageReference Include="NSubstitute" Version="5.3.0" />
+		
+5.   Create controller object by injecting required dependencies,  in  unit test class:  
+
+
+		 private readonly IProductRepository _mockRepository;
+		 private readonly ProductsController _controller;
+
+
+		a.   Create mock object for Repository class   (use NSubstitute library)
+					_mockRepository = Substitute.For<IProductRepository>();	
+			
+		b.   Create controller class object and inject mock object	
+				 _controller = new ProductsController(_mockRepository);			
+		
+
+6.  Write Unit Testcases using  controller object and mock object
+
+
+			a.   Prepare behaviour for the mock method:				
+					var products =    var products = new List<Product>{ ......  };
+					 _mockRepository.GetAllAsync().Returns(products);
+						
+			b.  Call controller method :     	
+				var result = await _controller.GetAll();
+
+
+			c.    Assert Methods :    Test  the result ---   status codes, data, etc... 
+			
+				 // Assert
+				var okResult = Assert.IsType<OkObjectResult>(result);
+				 var returnValue = Assert.IsAssignableFrom<IEnumerable<Product>>(okResult.Value);
+				 Assert.Equal(2, returnValue.Count());
+				await _mockRepository.Received().GetAllAsync();
+
+
+
