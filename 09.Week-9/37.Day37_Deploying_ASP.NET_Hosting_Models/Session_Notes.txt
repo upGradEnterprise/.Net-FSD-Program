@@ -1,3 +1,38 @@
+Day37 (1st Sept 2025)
+~~~~~~~~~~~~~~~~~~
+
+
+Deploying ASP.NET Hosting  Models
+
+-->  When you build a website or a web application (like an ASP.NET Core MVC app), it only exists on your local computer.  For other people to use it on the internet, you need to host it.
+
+--> Hosting in web development means:  Storing your website/web application on a server that is always connected to the internet, so users can access it via a web browser.
+
+
+
+IIS :
+
+		Classic ASP Web Sites    
+		ASP.NET  Web Sites    
+		ASP.NET  MVC Web Sites    
+		...
+		
+		ASP.NET Core Applications:   MVC ,  API 
+		Kestrel  (proxy)	+	ANCM  (ASP.NET Core Module)
+		
+		
+		
+Note:			Install   ASP.NET Core Module  to host asp.net core apps in IIS
+
+
+
+Download Link for ANCM
+~~~~~~~~~~~~~~~~~~~~~~
+https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-8.0.19-windows-hosting-bundle-installer
+
+
+--------------------------------------------------------
+
 
 1. What is Mocking in Unit Testing?
 2. Why do we use Mocking and Advantages?
