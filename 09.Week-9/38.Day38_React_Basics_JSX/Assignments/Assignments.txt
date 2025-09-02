@@ -1,0 +1,9 @@
+1.  Create react application to implement product catalogue for store.  (Refer problem statement document for more details).
+
+2.  Check the following points from React:
+
+		a. What are keys in React? How to use?
+		b. Study about Virtual DOM 
+		c.  Physical DOM vs Virtual DOM 
+		
+3.  How to create class components in React.  Create Hello World component using Class concept. 
