@@ -1,0 +1,203 @@
+Day38( 2nd Sept, 2025)
+~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+
+
+Login Component :				UI +  App. Logic
+
+		
+			<Login />
+
+
+
+JSX :			JS code +  html tags 
+
+
+		let uname =  "Scott";
+
+		<h1>Welcome {uname}</h1>					---		<h1>Welcome Scott</h1>
+
+
+-----------------------------
+
+
+Environment Setup for React
+
+	1.  Node JS
+	2.  VS Code 
+	3.   Install  create-react-app
+	
+	
+	
+			
+			
+1.  Create react project using create-react-app (CRA)
+
+>	node   -v
+
+>	npm  i  -g   create-react-app
+
+c:\ReactApps>create-react-app  my-app
+
+
+c:\ReactApps>cd my-app
+
+c:\ReactApps\my-app>npm start 
+
+	
+
+
+TypeScript Language:
+>	create-react-app  my-app   --template   typescript
+		
+------------------------------------------------------------------------------------------
+
+
+2.  Create react project Using Vite 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+>  npm  create  vite@latest   my-app2
+
+			a.  Choose Framework :    React
+			b.  Choose Language :      JavaScript
+		
+		
+>	 cd my-app2
+>  npm install
+>  npm run dev
+
+
+
+
+
+
+
+
+
+
+index.js 			---->			main.jsx
+
+
+
+
+
+
+
+index.html :	
+						<div id="root"></div>
+
+app.jsx		----			<App />
+
+
+index.jsx/main.jsx 	----	
+	createRoot(document.getElementById('root')).render( 	<App />  );
+
+
+----------------------------------------------------------------
+
+Working with Components in React
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Functional  Components
+
+
+		function    App()
+		{
+			
+		}
+			
+	
+a.  Component Name should be starts with capital letter -  pascal casing 
+b.  Component functions should return  JSX element  (UI). 	
+c.   Component should be export 
+
+		export default App;
+		
+d.   Component should return one parent element.		
+
+	Wrong:
+			   <h1>Hello, World!</h1>
+				<p>Welcome to my React application.</p>
+		
+Correct: 		
+	 <div>
+				<h1>Hello, World!</h1>
+				<p>Welcome to my React application.</p>
+    </div>
+	
+	
+Alternately:
+	<React.Fragment>
+				<h1>Hello, World!</h1>
+				<p>Welcome to my React application.</p>
+    </React.Fragment>
+	
+	<>
+        <h1>Hello, World!</h1>
+        <p>Welcome to my React application.</p>
+      </>
+	
+
+What is React.Fragment?
+
+-->  A common pattern in React is for a component to return multiple elements. 
+--> Fragments let you group a list of children without adding extra nodes to the DOM.	
+	
+	
+
+
+Eg:
+
+function App() {
+
+  return (
+    <div>
+      <h1>Hello, World!</h1>
+      <p>Welcome to my React application.</p>
+    </div>
+  );
+}
+
+
+export default App;
+---------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+Data Handling in React Components
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1.  Scalar 
+2.  Array
+3.  Object 
+4.  Array of Objects 
+	
+
+
+JSX Expression:	
+		User Name: {uname}
+
+
+
+
+
+Working with Arrays / Lists
+
+
+
+let ar = [1,2,3,4];
+
+let ar2 = ar.map(item => item * 2);
+
+
+
+	
+ skillsArray.map( (item) =>  <li>{item}</li> );  
