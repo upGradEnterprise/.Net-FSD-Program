@@ -12,8 +12,12 @@
 					
 2.  Create a React Component to implement ToDo-List case study (Refer the problem statement).
 
-
+3. Check the following questions :
+    a.  What happens if we modify the state variable directl, without using setter function?
+    b.  How to implement state concept in class components?  Try to re-crate Login example using class components
+    c.  Diff. between  useState()  and setState()  methods in react?
 
 
  
  
+
