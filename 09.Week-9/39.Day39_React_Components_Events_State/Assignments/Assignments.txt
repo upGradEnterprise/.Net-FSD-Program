@@ -1,0 +1,19 @@
+
+
+1.   Create React Component to process product details based on the given requirement :
+
+		a.   Read Product Name, Price and Quantity from user
+		b.   Find the out total amount at runtime and display 
+		c.   Apply the discount based on the total amount :
+					1.   >= 5000		---			5%
+					2.   >= 10000		---			10%
+					2.   >= 15000		---			15%
+					3.   >= 20000		-----			20%
+					
+2.  Create a React Component to implement ToDo-List case study (Refer the problem statement).
+
+
+
+
+ 
+ 
