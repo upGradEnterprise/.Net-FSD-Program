@@ -1,0 +1,71 @@
+Day39 (3rd Sept, 2025)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Components   ---		Single Responsibility Principle 
+
+--> 
+
+
+import EmpList from "./components/EmpList";
+
+
+Event Handling in JavaScript:	
+	a.   Define the function /  event handler
+	b.   Invoke the function in event 		
+			<button onclick="buttonClick()">Click Me</button>
+			
+			
+Event Handling in React:	
+	a.   Define the function /  event handler within Component
+	b.   Invoke the function in event 		
+			<button onClick={buttonClick}>Click Me</button>	
+	
+
+
+
+HTML Forms
+~~~~~~~~~~~~
+
+---> Regular approach   Reload / Redirect
+
+
+	action ---  current URL
+	method --   GET 
+
+<form  >
+
+
+	<input type="submit"  value="Login"  />
+</form>
+
+
+
+In React:
+
+
+	function handleSubmit(event)
+	{
+		event.preventDefault();
+		
+		// code to handle the data
+		// validate and submit to api by making ajax calls		
+	}
+	
+
+	<form  onSubmit={handleSubmit}>
+		......
+		<input type="submit"  value="Login"  />
+</form>
+
+
+
+------------------------
+
+  <h3>Passing Parameters to Event Handlers</h3>
+              
+	<button onClick={ () => handleDeleteClick(10)  }>Delete</button>
+	<button onClick={ () => handleDeleteClick(productId)  }>Delete</button>
+	<button onClick={ () => handleDeleteClick(item.productId)  }>Delete</button>
+
+
