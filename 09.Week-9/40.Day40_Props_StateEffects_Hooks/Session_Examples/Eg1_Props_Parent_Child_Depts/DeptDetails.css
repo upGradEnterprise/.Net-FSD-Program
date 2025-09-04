@@ -1,0 +1,11 @@
+.card
+{
+    border: 2px solid Blue;
+    border-top-width :  10px;
+    border-radius : 10px;
+    width : 180px;
+    padding : 5px;
+    text-align: center;
+    float: left;    
+    margin: 5px;
+}
