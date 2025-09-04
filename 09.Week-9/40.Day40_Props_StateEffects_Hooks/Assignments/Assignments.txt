@@ -1,0 +1,18 @@
+1.   Implement yesterday's  Login example using  Class Component.
+
+2.   Create React application to implement the following requirement:
+			a.  Use Parent and Child component to manage products data
+			b.  Parent should pass product object to child
+			c.   Child should display the product details in  cards format (use some CSS as per your choice)
+			d.  Child should provide a button called "Add to Cart".   While you click "Add to Cart", it should added to cart array which is in parent. 
+			e.  Parent should contains two arrays:  Products and Cart.  
+			f.   Parent should display Cart count - No. of items in Cart  (it is enough as of now)
+
+3.    Create React application to implement the following requirement:
+
+				a.  Parent component should provide option to select the job using drop-down. You should also include all Employees option. 
+				b.  When every you change the job, child  should display employees details based on the selected job. 
+				c.   Child contains the array, only job will get from parent. 
+				
+				
+				
