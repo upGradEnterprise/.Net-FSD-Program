@@ -1,1 +1,133 @@
    
+Day40 (4th Sept, 2025)
+~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+Manage state in Class Component
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+export    class  Login extends React.Component
+{		
+		
+			this.state =  {   uid : "", pwd :  "" };						
+			
+			this.setState( {  uid  :   newValue} );
+			this.setState( {  pwd  :   newValue} );
+		
+}
+
+
+
+
+Props in React
+~~~~~~~~~~~~
+
+
+  <img  src="Image1.jpg"    />
+  <img  src="Image1.jpg"   onclick="f1()"     />
+
+
+<EmpList   job="Manager"  />
+<EmpList   deptno="10"  />
+
+
+
+
+App 		---->				Greeting
+Parent 		---->			Child
+
+
+Error: 
+Uncaught Error: Objects are not valid as a React child (found: object with keys {name}).
+
+
+
+
+
+ const [count, setCount]  =  useState(0);
+
+
+
+let obj = {id : 1000,  name : "Scott"}; 
+
+let  {id, name}  =  obj;	// object destructuring
+
+
+	-----------------------------------------------------------
+	
+	
+	
+Parent :			DeptList  
+
+	---  holds all dept information ---  array of obejcts 
+	---  send a dept object to child   (DeptDetails)
+	
+	
+
+Child :				DeptDetails	
+	
+	
+	---  dept object as prop
+	---  display the given  dept details 
+	
+	
+	
+	<DeptDetails     deptObj={obj} />
+	<DeptDetails     deptObj={obj}   onDeptRemove={parent_function}   />
+	
+	
+	
+	
+	Parent --->   	Child 
+	Child   --->     Parent 
+	
+	<DeptDetails key={obj.deptno}    onDeptRemove={handleRemoveParent}    deptObj={obj} />
+	
+	-------------------------------------------------------------------------
+	
+	
+	
+	
+More details about  useState()
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+a.  state changes    --->    DOM updates /  re-rendering of the Component 
+b.  side effects:
+			--  every time complete component code will execute
+			--  api calls , dom updates at component loading 
+	
+	
+	useEffect()
+	~~~~~~~~~~
+	
+	Usage:			useEffect(callback,  [dependencies]);
+	
+	
+	a.   useEffect(callback);		----		 runs every render and  re-render 
+	b.   useEffect(callback, [] );		----		 runs only Component loading 
+	c.    useEffect(callback, [count] );		----		 runs loading time +  whenevery count changes 
+  
+	
+Note:   If you want to execute any clean-up code,    you can keep that code in callabck which should return from main callback of useEffect.  
+	
+	
+	
+	
+	
+	
+	
+>   npm  i   axios 
+
+>    axios.get(url).then(callback);
+	
+	
+	
+	
+	
+	
+	
+
+
+
