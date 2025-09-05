@@ -1,0 +1,16 @@
+
+1.  Study the example that we discussed in the session:
+			a.   Routes configuration
+			b.   Route Parameters
+			c.   Nested Routing 
+			
+2.  Create a React Application to implement the personal blog application (Refer Case Study) document. 
+
+
+3.  Check the following questions:
+			a.  What is localStorage/ sessionStorage in JavaScript?
+			b.  What is props.children in React?
+			c.   How to do navigate in code?
+			d.   How to send values in query string in React routing?  (this is not url parameters)
+
+ 
