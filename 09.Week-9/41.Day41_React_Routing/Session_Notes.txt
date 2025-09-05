@@ -1,1 +1,134 @@
    
+
+Day41(5th Sept, 2025)
+~~~~~~~~~~~~~~~~~~~~
+
+
+1.  What is SPA in Web Development?
+2.  Diff. Multiple Page and Single Page Applications?
+3.  Advantages of SPA? 
+4. How to implement navigations in React?
+
+--------------------------------------------
+
+Implement routing in React
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+1.  Install the react-router-dom package 
+
+		npm i  react-router-dom
+
+2.   Define required components   
+
+		a.   App		---  		Home
+		b.   About  	----		About 
+
+3.    Configure the routes in  index.jsx / main.jsx
+
+4.    Prepare all required navigations in  Navbar.jsx  and include in routing 
+
+5.    Load the routes in createRoot() method in index.js
+
+
+
+----------------------------------------------------
+
+Loading Images
+~~~~~~~~~~~~~~
+
+
+Option-1:		/src/assets
+						Image1.jpg
+						
+			import  myImage from "./assets/Image1.jpg";
+			
+			
+			<img   src={myImage}  />
+			
+			
+Option-2
+
+				/public
+						/assets
+								Image1.jpg
+								Image2.jpg
+								Banner.jpg
+								
+
+
+			<img src="/assets/Banner.jpg"   />
+	
+	
+--------------------------------------------------------------------------
+
+
+Handle Notfound routes
+~~~~~~~~~~~~~~~~~~~~~~
+
+
+1.  Define a component to address this
+			Eg:  NotFound.jsx
+			
+2.  Define a new route for this 
+
+		<Route   path="*"  element={   <Notfound/>   }  />
+
+
+-------------------------------------
+
+How to handle route parameters?
+
+
+1.   Configure the route with parameter
+
+		   <Route path="/Details/:id" element={<Details />} />
+
+2.   Prepare the Link tag with parameter
+			
+				<Link  to={"/Details/" + item.empno}>Details</Link>
+
+3.   Get the parameter value using hook 
+
+			import { useParams  } from 'react-router-dom';
+			
+			const { id }  = useParams();
+
+
+
+	
+
+
+
+
+
+------------------------
+
+
+
+Enable CORS in ASP.NET Core Web API
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1.  Install the package to enable cors:
+
+	    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.3.0" />
+	
+	
+	2.   Add CORS services with a default policy  (Program.cs)
+	
+	
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(builder =>
+    {
+        builder.AllowAnyOrigin() // Allows all origins (use cautiously)
+               .AllowAnyHeader()
+               .AllowAnyMethod();
+    });
+});
+ 
+ 
+ 3.  Add middleware to Enable CORS
+ 
+	app.UseCors(); // Apply default CORS policy
