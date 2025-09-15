@@ -1,0 +1,221 @@
+ 
+1.  What is SPA in Web Development?
+2.  Diff. Multiple Page and Single Page Applications?
+3.  Advantages of SPA? 
+4. How to implement navigations in React?
+
+--------------------------------------------
+
+Implement routing in React
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+1.  Install the react-router-dom package 
+
+		npm i  react-router-dom
+
+2.   Define required components   
+
+		a.   App		---  		Home
+		b.   About  	----		About 
+
+3.    Configure the routes in  index.jsx / main.jsx
+
+4.    Prepare all required navigations in  Navbar.jsx  and include in routing 
+
+5.    Load the routes in createRoot() method in index.js
+
+
+
+----------------------------------------------------
+
+Loading Images
+~~~~~~~~~~~~~~
+
+
+Option-1:		/src/assets
+						Image1.jpg
+						
+			import  myImage from "./assets/Image1.jpg";
+			
+			
+			<img   src={myImage}  />
+			
+			
+Option-2
+
+				/public
+						/assets
+								Image1.jpg
+								Image2.jpg
+								Banner.jpg
+								
+
+
+			<img src="/assets/Banner.jpg"   />
+	
+	
+--------------------------------------------------------------------------
+
+
+Handle Notfound routes
+~~~~~~~~~~~~~~~~~~~~~~
+
+
+1.  Define a component to address this
+			Eg:  NotFound.jsx
+			
+2.  Define a new route for this 
+
+		<Route   path="*"  element={   <Notfound/>   }  />
+
+
+-------------------------------------
+
+How to handle route parameters?
+
+
+1.   Configure the route with parameter
+
+		   <Route path="/Details/:id" element={<Details />} />
+
+2.   Prepare the Link tag with parameter
+			
+				<Link  to={"/Details/" + item.empno}>Details</Link>
+
+3.   Get the parameter value using hook 
+
+			import { useParams  } from 'react-router-dom';
+			
+			const { id }  = useParams();
+
+
+
+	
+
+
+
+
+
+------------------------
+
+
+
+Enable CORS in ASP.NET Core Web API
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1.  Install the package to enable cors:
+
+	    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.3.0" />
+	
+	
+	2.   Add CORS services with a default policy  (Program.cs)
+	
+	
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(builder =>
+    {
+        builder.AllowAnyOrigin() // Allows all origins (use cautiously)
+               .AllowAnyHeader()
+               .AllowAnyMethod();
+    });
+});
+ 
+ 
+ 3.  Add middleware to Enable CORS
+ 
+	app.UseCors(); // Apply default CORS policy
+	
+	
+-------------------------------------------------------------------------------------------------------------------
+
+Check the following questions:
+			a.  What is localStorage/ sessionStorage in JavaScript?
+			
+				sessionStorage in JavaScript is part of the Web Storage API, offering a mechanism to store data within the user's browser for the duration of a single browsing session. This data is specific to the tab or window in which it was created and is automatically cleared when that tab or window is closed.
+				
+				Methods:
+				sessionStorage.setItem(key, value): Stores a key-value pair.
+				sessionStorage.getItem(key): Retrieves the value associated with a given key.
+				sessionStorage.removeItem(key): Removes a specific key-value pair.
+				sessionStorage.clear(): Clears all key-value pairs from sessionStorage for the current origin.
+			
+					 
+			
+			b.  What is props.children in React?
+			
+					<Hello>
+								Content 
+					</Hello> 
+			
+			
+			c.   How to do navigate in code?
+					
+						useNavigate
+						
+						
+			
+			d.   How to send values in query string in React routing?  (this is not url parameters)
+			
+			
+---------------------------------------------------------------------------------
+
+
+
+
+How to work with secured routes? 
+
+		
+	a.   Request  - 			
+									http://localhost:5173/Emps
+									http://localhost:5173/Depts
+									http://localhost:5173/Login
+	
+	b.   Create a new component ProtectedRoute to implement this step	
+	
+			Verification based on token exists in  localStorage/sessionStorage
+	
+				if(  sessionStorage.getItem("AUTH_TOKEN") == null) 
+				{
+					If   Not Authenticated:		
+						Redirect to  Login Page  along with requested page url by attaching with Url as querystring 		
+				}
+				else
+				{
+					If   Authenticated:	Load the Requested Page  
+				}
+	
+				
+				
+				
+	c.    Login :			submit uid, pwd 
+		   
+		   if valid credentials:		
+						-->  send uid, pwd to api and get the JWT  token 
+						-->  Store the token in localStorage/sessionStorage
+						--> Go to Request  Page  or Default Page 
+		   if invalid credentials:		 error message invalid credentials
+
+
+	d.   Configure the ProtectedRoute with required routes that needs protection. 
+	
+	
+		without protection: 
+		 <Route path="/Emps" element={   <Emps />  }  />
+			 
+		with protection:
+		
+		 <Route path="/Emps" element={
+					<ProtectedRoute  returnUrl="/Emps">
+								<Emps />
+					</ProtectedRoute>
+			} />
+
+		<Route path="/Depts" element={
+					<ProtectedRoute  returnUrl="/Depts">
+								<Depts />
+					</ProtectedRoute>
+			} />
+
