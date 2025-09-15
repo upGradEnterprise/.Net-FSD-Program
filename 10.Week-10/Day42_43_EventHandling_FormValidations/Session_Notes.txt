@@ -1,0 +1,87 @@
+React Forms and Validations
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Controlled Components:		
+	--> Input element values are controlled by react state. 
+	
+Uncontrolled Components
+	--> Input element values are controlled by using DOM References
+
+
+
+GetData()
+		{
+				// ajax call and get data from the server
+				
+				// response should display in textboxes 
+						setEname(res.data.ename);
+		
+		}
+
+	
+
+
+<input  type="text"  onChange={(e) => setUid(e.target.value)}  />
+
+a.   initial values of state will not reflect the textbox
+b.   state updates using code -- will not reflect the textbox 
+
+solution :    value={uid}
+
+<input  type="text" value={uid} onChange={(e) => setUid(e.target.value)}  />
+
+
+
+
+Perform Validations:
+~~~~~~~~~~~~~~~~~~~
+
+	option-a:
+			  manually write the code: state, events, basic default options 
+			  	
+	option-b:
+			use 3rd party libraries 
+			
+
+
+
+
+
+
+
+
+
+object.assign()
+object.values()
+
+
+
+-------------------------
+
+Performing validations Using Formik library 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+const formik = useFormik(  {     initialValues,  validate,  onSubmit     });
+
+
+const formik = useFormik(  {    
+			initialValues :   object that holds all state variables,  
+			validate :  callback to perform validations and return error object,  
+			onSubmit  :  callback to handle submit   
+	    });
+		
+		
+		
+    
+  
+
+
+
+
+
+
+
+
