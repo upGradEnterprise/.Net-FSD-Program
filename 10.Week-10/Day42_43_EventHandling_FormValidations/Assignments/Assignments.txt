@@ -1,0 +1,28 @@
+1.  Assignment:   Build aVehicle Registration Form in React that collects vehicle details, validates inputs without using any third-party library, and displays error messages clearly.
+
+
+Requirements:
+
+	  a.   Form Fields & Validation Rules
+
+					 Field                 Validation Rules                                                                            
+					 --------------------  ------------------------------------------------------------------------------------------- 
+					Owner Name        		Required, at least 3 characters                                                             
+					Email             				Required, must be a valid email (`example@domain.com`)                                      
+					Phone Number      	Required, must be exactly 10 digits                                                         
+					Vehicle Number    	Required, must match format (e.g., `AB-12-CD-3456`) using regex                             
+					Vehicle Type      			Required, dropdown (Car, Bike, Truck, Bus)                                                  
+					Manufacture Year  	Required, must be a number, should not be less than 1990, and not greater than current year 
+					Chassis Number    		Required, must be exactly 17 characters (standard VIN length)                               
+
+		b.  On successful submission:     
+							Clear the form
+							Display an alert: "Vehicle Registered Successfully "
+							Log the form data in the console.
+ 
+ 
+ 2.   Create separate component to implement the above assignment using  Formik  library
+ 
+3.    Study the uncontrolled component concept in React.  Involve useRef() hook.  Create one basic example to demonstrate this concept. 
+ 
+ 
