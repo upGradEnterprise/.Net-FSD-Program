@@ -1,0 +1,13 @@
+
+
+1.  Study the complete example that we discussed today in the session. 
+2.  Create another example to implement all CRUD operations on Employee Data (Id, Name, Job, Salary, Deptno).  Make it as protected route. 
+
+	Hint :  
+		a.  Try to implement the above example using any of the API as per your choice. 
+		b.  If you are not get any api, you can try with JSON Server (Refer the json document)
+
+3.  Study the following points:
+			a. What JWT Token?  Significance of JWT Token libary in Web Development?
+			b.  What are interceptors? how do we use interceptors in axios? 
+			c.   How to implement  SignOut option in the react application?

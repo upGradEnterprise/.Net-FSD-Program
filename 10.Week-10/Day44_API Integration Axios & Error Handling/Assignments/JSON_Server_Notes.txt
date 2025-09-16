@@ -1,0 +1,36 @@
+AJAX communication with JSON Server
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-> JSON Server is act as server to communicate from any client side application.
+
+-> This server itself is act as database, api server that can requestable from browser.
+
+-> It runs the server under 3000 port number.
+		http://localhost:3000
+		
+
+Configure JSON Server
+~~~~~~~~~~~~~~~~~~~
+1.  		 
+			npm   i    -g     json-server@0.17.4
+			
+2.  Create a db_depts.json file in a directory
+	{
+	  "depts": 
+	   [
+		{ "Deptno": 10, "Dname": "Accounts", "Loc": "Hyd"},
+		{ "Deptno": 20, "Dname": "Sales", "Loc": "Pune"}	 
+	  ]
+	} 
+	
+3.   
+		json-server   --watch    db_depts.json 
+		json-server   --watch    --port 3500  db_depts.json 
+		json-server   --watch     --port 3500    --id deptno   db_depts.json 
+	 
+
+4.   http://localhost:3500/depts
+------------------------------------------------------------------------------
+
+
+
+
