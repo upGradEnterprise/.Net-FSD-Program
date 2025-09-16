@@ -1,0 +1,22 @@
+{
+	"products" :  [
+		{
+			"id": 1,
+			"name": "Laptop",
+			"price": 52000.00,
+			"category": "Electronics"
+		},
+		{
+			"id": 2,
+			"name": "Mobile",
+			"price":32000.00,
+			"category": "Electronics"
+		},
+		{
+			"id": 3,
+			"name": "Tab",
+			"price": 35000.00,
+			"category": "Electronics"
+		}
+	]
+}
