@@ -1,0 +1,122 @@
+
+Day44_API Integration Axios & Error Handling
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+-----------------------------
+1.  How to use  async and await keyword?
+2.  What is localStorage/ sessionStorage in JavaScript?
+3.   What is props.children in React?
+4.  How to send and read values  in query string in React routing? 
+---------------
+
+
+Working with Secured Routes in React 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+No Token 
+	 /Emps  		---->			 ProtectedRoute 			--->     Login   		---->     /Emps
+	 /Depts  		---->			 ProtectedRoute 			--->     Login   		---->     /Depts
+
+With Token 
+	 /Emps  		---->			 ProtectedRoute			-->		/Emps
+	 /Dept  		---->			 ProtectedRoute			-->		/Depts
+	 
+	 
+Direct Request Login :
+		/Login 			----->				/     (Home Page/Default Url)
+		
+		
+		
+		
+		
+		
+		
+
+How to work with secured routes? 
+
+ 
+	a.   Create a new component with the name "ProtectedRoute" to implement protection:
+	
+			Verification based on token exists in  localStorage/sessionStorage
+	
+				if(  sessionStorage.getItem("AUTH_TOKEN") == null) 
+				{
+					If   Not Authenticated:		
+						Redirect to  Login Page  along with requested page url by attaching with Url as querystring 		
+				}
+				else
+				{
+					If   Authenticated:	Load the Requested Page  
+				}
+	
+				
+				
+				
+	b.    Login :			submit uid, pwd 
+		   
+		   
+		   LoginButton Click: 
+				   i.   Validate/ verify uid, pwd  ,  include axios calls 
+						-->  send uid, pwd to api and get the JWT  token
+						
+				   ii.  if valid credentials:										 
+								-->  Store the token in sessionStorage
+								--> Get the returnUrl from Querystring 
+								--> navigate to Request  Page  or Default Page 
+								
+				  iii.  if invalid credentials:		 error message invalid credentials
+
+
+	c.   Configure the ProtectedRoute with required routes that needs protection - main.jsx / index.jsx
+	
+	
+		without protection: 
+				<Route path="/Emps" element={   <Emps />  }  />
+			 
+		with protection:
+		
+		 <Route path="/Emps" element={
+					<ProtectedRoute  returnUrl="/Emps">
+								<Emps />
+					</ProtectedRoute>
+			} />
+
+		<Route path="/Depts" element={
+					<ProtectedRoute  returnUrl="/Depts">
+								<Depts />
+					</ProtectedRoute>
+			} />
+
+
+--------------------------------------------------------------------------------
+
+
+1.    Perform CRUD operations using axios by making API calls
+
+2.    Creating  Services (Reusable class) in  React 
+		a.  Create service with required methods 
+		b.  Import the service in component 
+		c.  Perform opeations 
+
+3.  Implement   Secured Routes   	(Completed)
+
+4.  Login --  check user credentials with api call 
+					get jwt token from the server 
+					
+					
+					
+			a.  api  url 
+			b.  request type
+			c.   request data  --- json format 
+			
+					{
+						"userName" : "Hello",
+						"password" : "Hello123"
+					}
+					
+5. How to make authorized api calls?
+			---  Send tokens along with axios request to server
+
+					axios.get(API_URL, { headers:  { Authorization: `Bearer ${token}` } })
