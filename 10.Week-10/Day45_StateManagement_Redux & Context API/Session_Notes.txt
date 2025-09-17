@@ -1,0 +1,108 @@
+
+State Management in React
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1.  Component  State  : 		useState() 
+			const  [uid,  setUid]  =  useState("");
+			
+2.  props  concepts:
+					parent component		--->   child component
+			
+
+Issues:  Prop drilling
+
+3.   Context API 	----		Application level,  React feature 		
+		Small Applicatoins 
+
+4.  Redux  :		3rd Party libraries
+		Complex, Big Applications
+
+	
+
+
+
+
+
+
+What is Prop drilling?
+
+-->  Prop drilling in React refers to the process of passing data (props) from a parent component down through multiple layers of nested child components, even when some of the intermediate components do not directly need or use that data. 
+
+-->  The data is simply passed along to reach a deeply nested component that requires it. 
+
+
+
+Soluiton :    Context API,   Redux,   Zustand
+
+
+
+
+
+function App() {
+  const user = { name: "Alice", age: 25 };
+
+  return <Parent user={user} />;
+}
+
+function Parent({ user }) {
+  // Parent doesn’t need `user`, but must pass it down
+  return <Child user={user} />;
+}
+
+function Child({ user }) {
+  // Child also doesn’t need `user`, but passes it down
+  return <GrandChild user={user} />;
+}
+
+function GrandChild({ user }) {
+  // Finally, the component that actually uses it
+  return <h1>Hello, {user.name}</h1>;
+}
+
+
+------------------------------
+
+
+Context API
+~~~~~~~~~~
+
+
+
+
+App  		----      state :  user details 
+
+
+
+App 	--->		Parent 	--->		 Child  	----> GrandChild  
+
+
+
+Step-1:
+			export var userContext  = React.createContext(null);
+
+Step-2:		Prepare data that you want to share 
+		 let [userObj, setUserObj] = useState({ name : "Scott", age : 25, email : "scott@gmail.com"});
+
+
+Step-3:		Configure the Provider using context Object
+
+			<userContext.Provider value={userObj}>
+					  <Parent />  
+			</userContext.Provider>
+			
+			
+
+
+
+Sending multiple values in provider:
+
+			<userContext.Provider value={ { userObj, themeObj }  }>
+					  <Parent />  
+			</userContext.Provider>
+			
+
+
+Consumer: 
+		contextData.userObj.Name
+		contextData.themeObj.textColor
+		
