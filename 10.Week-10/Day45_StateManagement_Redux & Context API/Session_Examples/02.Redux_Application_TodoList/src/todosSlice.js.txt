@@ -1,0 +1,29 @@
+// todosSlice.js
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+
+export const fetchTodos = createAsyncThunk('todos/fetchTodos', async () => {
+  // Simulate API
+  return [{ id: 1, text: 'Sample Todo' }];
+});
+
+const todosSlice = createSlice({
+  name: 'todos',
+  initialState: { list: [], status: 'idle' },
+  reducers: {
+    addTodo: (state, action) => {
+      state.list.push({ id: Date.now(), text: action.payload });
+    },
+    removeTodo: (state, action) => {
+      state.list = state.list.filter(todo => todo.id !== action.payload);
+    },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(fetchTodos.fulfilled, (state, action) => {
+      state.list = action.payload;
+      state.status = 'succeeded';
+    });
+  },
+});
+
+export const { addTodo, removeTodo } = todosSlice.actions;
+export default todosSlice.reducer;
