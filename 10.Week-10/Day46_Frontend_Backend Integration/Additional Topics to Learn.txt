@@ -1,0 +1,17 @@
+
+
+1.   Check the few more hooks that improve the performance:  
+		Eg:   useMemo(), useCallback(), etc..
+		
+2.  Virtualize Long Lists
+		- Rendering thousands of items at once is expensive.
+		- Use libraries like react-window or react-virtualized to render only visible rows.
+		
+3.   Optimize API Calls & State Management
+		- Cache data using tools like React Query (TanStack Query) to prevent redundant API requests.
+		- Use pagination or infinite scrolling for large datasets.
+
+4.   Authentication & Authorization:
+		--- Role-based access (show/hide UI based on user role).
+
+5. Try some unit testing libraries :   Jest, React Testing Library 
